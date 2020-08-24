@@ -61,8 +61,6 @@ const NavbarWrapper = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    position: absolute;
-    right: 16px;
   }
 
   #search-btn {
@@ -90,6 +88,7 @@ const NavbarWrapper = styled.div`
     color: #fff;
     border-radius: 50vh;
     padding: 11px 24px;
+    margin: 0;
   }
 `;
 

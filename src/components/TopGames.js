@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import GameCard from './GameCard';
 
 const TopGamesWrapper = styled.div`
-  margin-top: 500px;
+  margin-top: 50px;
 
   h1 {
     font: 700 40px / 48px Poppins, Helvetica, Arial, sans-serif;
@@ -61,12 +61,12 @@ const games = [
     watching: 141,
     streams: 155,
   },
-  // {
-  //   rank: 5,
-  //   title: 'Grand Theft Auto 5',
-  //   watching: 1431,
-  //   streams: 6502,
-  // },
+  {
+    rank: 5,
+    title: 'Grand Theft Auto 5',
+    watching: 1431,
+    streams: 6502,
+  },
   // {
   //   rank: 6,
   //   title: 'VALORANT',
