@@ -3,6 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 const Global = createGlobalStyle`
 
 :root {
+
+    --br: '0.5em',
+	--mine: 'red';
+    --transition: 'transform 200ms cubic-bezier(0.2, 1, 0.8, 1)',
   }
 	html, body {
 		box-sizing: border-box;
@@ -14,6 +18,16 @@ const Global = createGlobalStyle`
 		margin: 0;
 		box-sizing: inherit;
 	}
+	body {
+		font-family: sans-serif;
+		min-height: 100vh;
+		display: -ms-grid;
+		display: grid;
+		place-items: center;
+		background: var(--clr-dark);
+		color: var(--clr-light);
+	}
+	
     body * {
         transition: 0.2s;
 
@@ -25,6 +39,7 @@ const Global = createGlobalStyle`
 	*:focus {
 	  outline: none;
 	}
+	
 
 	
 `;
