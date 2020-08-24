@@ -11,7 +11,6 @@ const Global = createGlobalStyle`
 	html, body {
 		box-sizing: border-box;
 		height: 100%;
-
 	}
 	*, *:before, *:after {
 		padding: 0;
@@ -19,13 +18,8 @@ const Global = createGlobalStyle`
 		box-sizing: inherit;
 	}
 	body {
-		font-family: sans-serif;
-		min-height: 100vh;
-		display: -ms-grid;
-		display: grid;
-		place-items: center;
-		background: var(--clr-dark);
-		color: var(--clr-light);
+		font-family: 'Poppins', sans-serif;
+		
 	}
 	
     body * {
@@ -35,6 +29,9 @@ const Global = createGlobalStyle`
 	h1, h2, h3, h4, h5, h6 {
         font-weight: normal;
   
+	}
+	ul {
+		list-style-type: none;
 	}
 	*:focus {
 	  outline: none;

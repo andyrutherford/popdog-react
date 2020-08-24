@@ -14,5 +14,7 @@ export default {
     clraccent: 'rgb(222, 52, 0)',
     clraccentdark: 'rgb(163, 38, 0)',
     clrsecondary: 'rgb(0, 76, 200)',
+
+    btnPrimary: '#3a86f9',
   },
 };

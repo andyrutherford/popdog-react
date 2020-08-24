@@ -260,58 +260,60 @@ const GameCard = ({ game }) => {
   return (
     <GameCardWrapper>
       {' '}
-      <div class='game'>
-        <div class='rank'>{game.rank}</div>
-        <div class='front'>
-          <img class='thumbnail' src={gameCover} alt='' />
-          <h3 class='name'>{game.title}</h3>
-          <div class='stats'>
-            <p class='viewers'>539.9k</p>
-            <div class='streamers'>
+      <div className='game'>
+        <div className='rank' style={{ width: '29px', textAlign: 'center' }}>
+          {game.rank}
+        </div>
+        <div className='front'>
+          <img className='thumbnail' src={gameCover} alt='' />
+          <h3 className='name'>{game.title}</h3>
+          <div className='stats'>
+            <p className='viewers'>539.9k</p>
+            <div className='streamers'>
               <img src={streamer1} alt='' />
               <img src={streamer2} alt='' />
               <img src={streamer3} alt='' />
             </div>
           </div>
         </div>
-        <div class='back'>
-          <div class='streaming-info'>
-            <p class='game-stat'>
+        <div className='back'>
+          <div className='streaming-info'>
+            <p className='game-stat'>
               {game.watching}
               <span>Watching</span>
             </p>
-            <p class='game-stat'>
+            <p className='game-stat'>
               {game.streams}
               <span>Streams</span>
             </p>
           </div>
-          <button class='btn'>See more streams</button>
-          <div class='streamers'>
-            <div class='streamer'>
-              <div class='icon'>
+          <button className='btn'>See more streams</button>
+          <div className='streamers'>
+            <div className='streamer'>
+              <div className='icon'>
                 <img src={streamer1} alt='' />
               </div>
-              <p class='name'>Gamer 1</p>
-              <p class='number'>36.1k</p>
+              <p className='name'>Gamer 1</p>
+              <p className='number'>36.1k</p>
             </div>
-            <div class='streamer'>
-              <div class='icon'>
+            <div className='streamer'>
+              <div className='icon'>
                 <img src={streamer2} alt='' />
               </div>
-              <p class='name'>Gamer 2</p>
-              <p class='number'>32.2k</p>
+              <p className='name'>Gamer 2</p>
+              <p className='number'>32.2k</p>
             </div>
-            <div class='streamer'>
-              <div class='icon'>
+            <div className='streamer'>
+              <div className='icon'>
                 <img src={streamer3} alt='' />
               </div>
-              <p class='name'>Gamer 3</p>
-              <p class='number'>17.3k</p>
+              <p className='name'>Gamer 3</p>
+              <p className='number'>17.3k</p>
             </div>
           </div>
         </div>
 
-        <div class='background'></div>
+        <div className='background'></div>
       </div>
     </GameCardWrapper>
   );
