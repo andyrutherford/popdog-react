@@ -5,6 +5,7 @@ import Theme from './styles/Theme';
 
 import Container from './components/UI/Container';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
 import TopGames from './components/TopGames';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <div className='App'>
         <Navbar />
         <Container>
+          <Header />
           <TopGames />
         </Container>
       </div>

@@ -30,6 +30,9 @@ const Global = createGlobalStyle`
         font-weight: normal;
   
 	}
+	a {
+		text-decoration: none;
+	}
 	ul {
 		list-style-type: none;
 	}
