@@ -6,7 +6,7 @@ const Global = createGlobalStyle`
 
     --br: '0.5em',
 	--mine: 'red';
-    --transition: 'transform 200ms cubic-bezier(0.2, 1, 0.8, 1)',
+    // --transition: 'transform 200ms cubic-bezier(0.2, 1, 0.8, 1)',
   }
 	html, body {
 		box-sizing: border-box;
@@ -22,10 +22,7 @@ const Global = createGlobalStyle`
 		
 	}
 	
-    body * {
-        transition: 0.2s;
 
-      }
 	h1, h2, h3, h4, h5, h6 {
         font-weight: normal;
   

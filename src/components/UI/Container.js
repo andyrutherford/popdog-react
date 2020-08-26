@@ -5,7 +5,14 @@ const Container = styled.div`
   padding: 0 16px;
   height: 100%;
   max-width: 1260px;
-  border: 1px solid grey;
+
+  @media (min-width: 972px) {
+    max-width: 908px;
+  }
+
+  @media (min-width: 1288px) {
+    max-width: 1260px;
+  }
 `;
 
 export default Container;

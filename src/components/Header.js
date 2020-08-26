@@ -23,7 +23,6 @@ p {
 }
 
 a {
-
     padding: 10px 20px;
     background: ${(props) => props.theme.colors.btnPrimary};
     color: #fff;
@@ -54,15 +53,13 @@ a {
     position: relative;
 }
 
-
-
 .dog-img {
     display: none;
     max-width: 328px;
     z-index: 1;
 }
 
-@media (min-width: 956px) {
+@media (min-width: 972px) {
     h1 {
         font-size: 3rem;
         font-weight: 800;

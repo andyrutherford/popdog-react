@@ -13,6 +13,7 @@ const NavbarWrapper = styled.div`
   height: 80px;
   max-width: 1260px;
   margin: auto;
+  border-bottom: 1px solid grey;
 
   a {
     padding-top: 8px;
@@ -44,7 +45,8 @@ const NavbarWrapper = styled.div`
   }
 
   .logo {
-    font-weight: 1000;
+    font-weight: 700;
+    font-size: 2.5rem;
     color: #f84443;
     letter-spacing: -3px;
   }

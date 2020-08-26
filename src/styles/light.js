@@ -16,5 +16,8 @@ export default {
     clrsecondary: 'rgb(0, 76, 200)',
 
     btnPrimary: '#3a86f9',
+    btnSecondary: '#eff5ff',
+
+    hoverPrimary: '#3a86f9',
   },
 };
