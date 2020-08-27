@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { SearchIcon, ThemeIcon } from '../components/UI/Icons';
+import { ReactComponent as Logo } from '../img/logo.svg';
 
 const NavbarWrapper = styled.div`
   position: sticky;
@@ -42,13 +43,6 @@ const NavbarWrapper = styled.div`
 
   .nav-left-links {
     margin-left: 40px;
-  }
-
-  .logo {
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #f84443;
-    letter-spacing: -3px;
   }
 
   .divider {
@@ -98,7 +92,7 @@ const Navbar = () => {
   return (
     <NavbarWrapper>
       <div className='nav-left'>
-        <h1 className='logo'>Popdog</h1>
+        <Logo />
         <nav>
           <ul className='nav-left-links'>
             <li>

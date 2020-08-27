@@ -42,6 +42,10 @@ a:hover {
     background-repeat: no-repeat;
     opacity: 0.2;
     inset: 0px 0px 20%;
+    top: 0px;
+    left: 0px;
+    bottom: 20%;
+    right: 0px;
     position: absolute;
 }
 
@@ -64,6 +68,7 @@ a:hover {
 .dog-img {
     display: none;
     max-width: 328px;
+    height: 350px;
     z-index: 1;
 }
 

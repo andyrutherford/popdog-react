@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ReactComponent as Logo } from '../img/logo.svg';
+import { ReactComponent as Logo } from '../img/logo-icon.svg';
 import { ReactComponent as DiscordIcon } from '../img/discord.svg';
 import { ReactComponent as TwitterIcon } from '../img/twitter.svg';
 import { ReactComponent as InstagramIcon } from '../img/instagram.svg';
@@ -14,7 +14,7 @@ const FooterWrapper = styled.div`
       rgba(235, 241, 245, 0) 100%
     )
     repeat scroll 0% 0%;
-  padding-top: 5rem;
+  padding-top: 8rem;
   padding-bottom: 5rem;
   font-size: 0.875rem;
   font-weight: 300;
@@ -108,7 +108,7 @@ const FooterWrapper = styled.div`
     }
 
     .social-icons {
-      justify-content: end;
+      justify-content: flex-end;
       align-items: center;
     }
 
