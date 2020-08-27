@@ -30,6 +30,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    box-shadow: rgba(32, 98, 225, 0.25) 0px 4px 4px;
+    background: rgb(32, 98, 225) none repeat scroll 0% 0%;
+}
+
 .header-background {
     background-image: url(${stars});
     background-position: right center;
@@ -42,10 +47,13 @@ a {
 
 .header-content {
     padding: 32px 0;
+
 }
 
 .header-left {
     text-align: center;
+        z-index: 1;
+
 }
 
 .social-icons-right {

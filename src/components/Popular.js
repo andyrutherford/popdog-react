@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import { ReactComponent as RightChevronIcon } from '../img/right-chevron.svg';
 
 const PopularWrapper = styled.div`
-  margin: 50px 0;
-  overflow: scroll;
+  overflow: scroll hidden;
+  scrollbar-width: none;
+  padding-bottom: 2rem;
 
   h2 {
     font-size: 1.2rem;

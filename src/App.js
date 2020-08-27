@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Popular from './components/Popular';
 import TopGames from './components/TopGames';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -19,8 +20,9 @@ const App = () => {
           <Header />
           <Popular />
           <hr style={{ border: '0.5px solid #e3e8eb' }} />
-          <TopGames />
+          {/* <TopGames /> */}
         </Container>
+        <Footer />
       </div>
     </Theme>
   );

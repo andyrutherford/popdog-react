@@ -19,5 +19,7 @@ export default {
     btnSecondary: '#eff5ff',
 
     hoverPrimary: '#3a86f9',
+    socialLinkHover: '#000',
+    footerLink: '#919597',
   },
 };
