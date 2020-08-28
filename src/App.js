@@ -19,8 +19,7 @@ const App = () => {
         <Container>
           <Header />
           <Popular />
-          <hr style={{ border: '0.5px solid #e3e8eb' }} />
-          <TopGames />
+          {/* <TopGames /> */}
         </Container>
         <Footer />
       </div>
