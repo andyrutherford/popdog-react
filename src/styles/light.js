@@ -22,4 +22,8 @@ export default {
     socialLinkHover: '#000',
     footerLink: '#919597',
   },
+
+  breakpoints: {
+    lg: '972px',
+  },
 };

@@ -4,15 +4,14 @@ import styled from 'styled-components';
 import GameCard from './GameCard';
 
 const TopGamesWrapper = styled.div`
-  margin-top: 50px;
-
   h1 {
-    font: 700 40px / 48px Poppins, Helvetica, Arial, sans-serif;
+    font: 600 2rem / 48px Poppins, Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
+    margin-bottom: 1rem;
   }
   select {
     height: 40px;
-    width: 200px;
+    width: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
@@ -24,15 +23,27 @@ const TopGamesWrapper = styled.div`
     border-radius: 5px;
   }
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 1.5em;
   }
   .content {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 2.2em;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    h1 {
+      font-size: 2.5rem;
+      margin-botton: 0;
+    }
+    select {
+      width: 200px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 `;
 

@@ -19,7 +19,7 @@ const App = () => {
         <Container>
           <Header />
           <Popular />
-          {/* <TopGames /> */}
+          <TopGames />
         </Container>
         <Footer />
       </div>
