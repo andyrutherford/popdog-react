@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Popular from './components/Popular';
 import TopGames from './components/TopGames';
+import PopularStreams from './components/PopularStreams';
 import Footer from './components/Footer';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Header />
           <Popular />
           <TopGames />
+          <PopularStreams />
         </Container>
         <Footer />
       </div>

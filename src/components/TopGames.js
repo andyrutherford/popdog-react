@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import GameCard from './GameCard';
+import SeeMoreButton from './UI/SeeMoreButton';
+
+import { GameControllerIcon } from '../components/UI/Icons';
 
 const TopGamesWrapper = styled.div`
   h1 {
@@ -31,6 +34,25 @@ const TopGamesWrapper = styled.div`
     gap: 2.2em;
   }
 
+  .separator {
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .separator-btn {
+    width: 100%;
+  }
+
+  .separator-line {
+    display: none;
+  }
+
+  .separator-line hr {
+    width: 100%;
+    border: 0.5px solid rgb(227, 232, 235);
+  }
+
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     h1 {
       font-size: 2.5rem;
@@ -43,6 +65,19 @@ const TopGamesWrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .separator div {
+    }
+    .separator-line {
+      display: block;
+      flex: 1 1 0%;
+    }
+
+    .separator-btn {
+      width: 200px;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 `;
@@ -100,6 +135,20 @@ const TopGames = () => {
         {games.map((g, idx) => (
           <GameCard key={idx} game={g} />
         ))}
+      </div>
+      <div className='separator'>
+        <div className='separator-line'>
+          <hr />
+        </div>
+        <div className='separator-btn'>
+          <SeeMoreButton href='#!'>
+            <GameControllerIcon />
+            See More Games
+          </SeeMoreButton>
+        </div>
+        <div className='separator-line'>
+          <hr />
+        </div>
       </div>
     </TopGamesWrapper>
   );
