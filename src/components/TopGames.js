@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import GameCard from './GameCard';
 import SeeMoreButton from './UI/SeeMoreButton';
 
-import { GameControllerIcon } from '../components/UI/Icons';
+import controller from '../img/game-controller.svg';
 
 const TopGamesWrapper = styled.div`
   h1 {
@@ -24,6 +24,24 @@ const TopGamesWrapper = styled.div`
     background-position-y: 5px;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
+  }
+
+  .separator-btn a:before {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    content: '';
+    -webkit-mask: url(${controller}) no-repeat 50% 50%;
+    mask: url(${controller}) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background: ${(props) => props.theme.colors.btnPrimary};
+    vertical-align: text-top;
+    margin-right: 0.5em;
+  }
+
+  .separator-btn a:hover:before {
+    background: #fff;
   }
   .header {
     margin-bottom: 1.5em;
@@ -141,10 +159,7 @@ const TopGames = () => {
           <hr />
         </div>
         <div className='separator-btn'>
-          <SeeMoreButton href='#!'>
-            <GameControllerIcon />
-            See More Games
-          </SeeMoreButton>
+          <SeeMoreButton href='#!'>See More Games</SeeMoreButton>
         </div>
         <div className='separator-line'>
           <hr />
