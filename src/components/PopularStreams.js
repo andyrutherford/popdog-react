@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import StreamCard from './StreamCard';
+import SeeMoreButton from './UI/SeeMoreButton';
+
+import rightarrow from '../img/right-arrow.svg';
+
 const PopularStreamsWrapper = styled.div`
   padding: 4rem 0 2rem;
   h1 {
@@ -8,28 +13,76 @@ const PopularStreamsWrapper = styled.div`
     letter-spacing: -2px;
     margin-bottom: 1rem;
   }
-  select {
-    height: 40px;
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 5px;
-    border: 1px solid #dfdfdf;
-    border-radius: 5px;
-  }
   .header {
     margin-bottom: 1.5em;
   }
 
+  .separator {
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .separator-btn {
+    width: 100%;
+  }
+
+  .separator-line {
+    display: none;
+  }
+
+  .separator-line hr {
+    width: 100%;
+    border: 0.5px solid rgb(227, 232, 235);
+  }
+
+  .separator-btn a:after {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    content: '';
+    -webkit-mask: url(${rightarrow}) no-repeat 50% 50%;
+    mask: url(${rightarrow}) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background: ${(props) => props.theme.colors.btnPrimary};
+    vertical-align: text-top;
+    margin-left: 0.5em;
+  }
+
+  .separator-btn a:hover:after {
+    background: #fff;
+  }
+
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    h1 {
+      font-size: 2.5rem;
+      margin-botton: 0;
+    }
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 288px);
+      gap: 2em 1.5em;
+      justify-content: center;
+    }
+
+    .separator div {
+    }
+    .separator-line {
+      display: block;
+      flex: 1 1 0%;
+    }
+
+    .separator-btn {
+      width: 200px;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 `;
@@ -39,8 +92,27 @@ const PopularStreams = () => {
     <PopularStreamsWrapper>
       {' '}
       <div className='header'>
-        <h1>Top Games</h1>
+        <h1>Popular Streams</h1>
         <span>The most viewers right now on Twitch</span>
+      </div>
+      <div className='content'>
+        <StreamCard />
+        <StreamCard />
+        <StreamCard />
+        <StreamCard />
+        <StreamCard />
+        <StreamCard />
+      </div>
+      <div className='separator'>
+        <div className='separator-line'>
+          <hr />
+        </div>
+        <div className='separator-btn'>
+          <SeeMoreButton href='#!'>See More Streams</SeeMoreButton>
+        </div>
+        <div className='separator-line'>
+          <hr />
+        </div>
       </div>
     </PopularStreamsWrapper>
   );

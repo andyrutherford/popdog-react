@@ -26,23 +26,6 @@ const TopGamesWrapper = styled.div`
     border-radius: 5px;
   }
 
-  .separator-btn a:before {
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    content: '';
-    -webkit-mask: url(${controller}) no-repeat 50% 50%;
-    mask: url(${controller}) no-repeat 50% 50%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background: ${(props) => props.theme.colors.btnPrimary};
-    vertical-align: text-top;
-    margin-right: 0.5em;
-  }
-
-  .separator-btn a:hover:before {
-    background: #fff;
-  }
   .header {
     margin-bottom: 1.5em;
   }
@@ -69,6 +52,24 @@ const TopGamesWrapper = styled.div`
   .separator-line hr {
     width: 100%;
     border: 0.5px solid rgb(227, 232, 235);
+  }
+
+  .separator-btn a:before {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    content: '';
+    -webkit-mask: url(${controller}) no-repeat 50% 50%;
+    mask: url(${controller}) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background: ${(props) => props.theme.colors.btnPrimary};
+    vertical-align: text-top;
+    margin-right: 0.5em;
+  }
+
+  .separator-btn a:hover:before {
+    background: #fff;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
