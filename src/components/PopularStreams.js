@@ -17,6 +17,13 @@ const PopularStreamsWrapper = styled.div`
     margin-bottom: 1.5em;
   }
 
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 288px);
+    gap: 2em 1.5em;
+    justify-content: center;
+  }
+
   .separator {
     margin-top: 10rem;
     display: flex;
@@ -63,13 +70,6 @@ const PopularStreamsWrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 288px);
-      gap: 2em 1.5em;
-      justify-content: center;
     }
 
     .separator div {
