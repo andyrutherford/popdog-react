@@ -25,7 +25,7 @@ const PopularStreamsWrapper = styled.div`
   }
 
   .separator {
-    margin-top: 10rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
   }

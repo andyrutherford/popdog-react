@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import user from '../img/user.svg';
 import { ReactComponent as TwitchIcon } from '../img/twitch-small.svg';
+import streamer1 from '../img/streamer-1.jpg';
 
 const StreamCardWrapper = styled.div`
   width: 288px;
@@ -17,10 +18,12 @@ const StreamCardWrapper = styled.div`
     font-weight: 600;
     width: 288px;
     height: 169px;
-    background: lightgrey;
+    background: limegreen;
     border-radius: 10px;
     border-bottom-right-radius: 20px;
     color: #fff;
+    background-image: url(https://source.unsplash.com/random/300x200/?videogame);
+    opacity: 0.8;
   }
 
   .top-left {
@@ -136,6 +139,9 @@ const StreamCardWrapper = styled.div`
     width: 3em;
     border-radius: 50vh;
     background: grey;
+    background-image: url(${streamer1});
+    background-size: cover;
+    border: 1px solid #fff;
   }
 
   :hover {
@@ -148,7 +154,8 @@ const StreamCardWrapper = styled.div`
   :hover .image {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    transition: border-radius 150ms ease-in-out;
+    opacity: 1;
+    transition: border-radius 150ms ease-in-out, opacity 150ms ease-in-out;
   }
 
   :hover .top-right div {

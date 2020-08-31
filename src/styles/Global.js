@@ -30,6 +30,9 @@ const Global = createGlobalStyle`
 	a {
 		text-decoration: none;
 	}
+	a:visited {
+		color: #3a86f9;
+	  }
 	ul {
 		list-style-type: none;
 	}

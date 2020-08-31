@@ -14,6 +14,9 @@ export default {
     clraccentdark: 'rgb(163, 38, 0)',
     clrsecondary: 'rgb(0, 76, 200)',
 
+    textPrimary: '#0d1113',
+    textSecondary: '#919597',
+
     cardBackground: '#fff',
     btnPrimary: '#3a86f9',
     btnSecondary: '#eff5ff',

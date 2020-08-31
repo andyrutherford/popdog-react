@@ -22,7 +22,7 @@ p {
     margin: 16px 0 32px;
 }
 
-a {
+.btn {
     padding: 10px 20px;
     background: ${(props) => props.theme.colors.btnPrimary};
     color: #fff;
@@ -30,7 +30,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+.btn:hover {
     box-shadow: rgba(32, 98, 225, 0.25) 0px 4px 4px;
     background: rgb(32, 98, 225) none repeat scroll 0% 0%;
 }
@@ -56,8 +56,12 @@ a:hover {
 
 .header-left {
     text-align: center;
-        z-index: 1;
+    z-index: 1;
+}
 
+.header-description {
+  color: ${(props) => props.theme.colors.textPrimary};
+  font-weight: 300;
 }
 
 .social-icons-right {
@@ -91,6 +95,9 @@ a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+    }
+    .header-description {
+      color: ${(props) => props.theme.colors.textSecondary};
     }
 
     .header-right {
@@ -137,8 +144,8 @@ const Header = () => {
           <h1 className='header-intro'>A new way to find out what's on.</h1>
           <p className='header-description'>
             Sign up with your Twitch or YouTube (soon!) account and watch all of
-            your favorite streams here on Popog. Want more info? Check out our
-            video.
+            your favorite streams here on Popog. Want more info?{' '}
+            <a href='#!'>Check out our video.</a>
           </p>
           <a className='btn' href='#!'>
             Sign up with Popdog
