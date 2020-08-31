@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import PopularStreamsCard from '../components/cards/PopularStreamsCard';
+
 import { ReactComponent as RightChevronIcon } from '../img/right-chevron.svg';
 
 const PopularWrapper = styled.div`
@@ -130,7 +132,7 @@ const Popular = () => {
                 <a href='#!'>Popular Streams</a>
                 <RightChevronIcon className='arrow' />
               </h2>
-              <div className='card'></div>
+              <PopularStreamsCard />
             </div>
             <div className='esports-matches-card'>
               <h2 className='card-header'>

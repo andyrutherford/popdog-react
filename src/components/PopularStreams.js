@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import StreamCard from './StreamCard';
+import StreamCard from './cards/StreamCard';
 import SeeMoreButton from './UI/SeeMoreButton';
 
 import rightarrow from '../img/right-arrow.svg';

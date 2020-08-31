@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import GameCard from './GameCard';
+import GameCard from './cards/GameCard';
 import SeeMoreButton from './UI/SeeMoreButton';
 
 import controller from '../img/game-controller.svg';

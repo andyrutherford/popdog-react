@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import gameCover from '../img/game-cover.jpg';
-import streamer1 from '../img/streamer-1.jpg';
-import streamer2 from '../img/streamer-2.jpg';
-import streamer3 from '../img/streamer-3.jpg';
+import gameCover from '../../img/game-cover.jpg';
+import streamer1 from '../../img/streamer-1.jpg';
+import streamer2 from '../../img/streamer-2.jpg';
+import streamer3 from '../../img/streamer-3.jpg';
 
 const GameCardWrapper = styled.div`
   h1,

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import user from '../img/user.svg';
-import { ReactComponent as TwitchIcon } from '../img/twitch-small.svg';
-import streamer1 from '../img/streamer-1.jpg';
+import user from '../../img/user.svg';
+import { ReactComponent as TwitchIcon } from '../../img/twitch-small.svg';
+import streamer1 from '../../img/streamer-1.jpg';
 
 const StreamCardWrapper = styled.div`
   width: 288px;
@@ -169,8 +169,6 @@ const StreamCardWrapper = styled.div`
   }
 
   :hover .center {
-    // visibility: visible;
-    // transition: visibility 150ms ease-in-out;
     opacity: 1;
     transition: opacity 300ms ease-in-out;
   }
