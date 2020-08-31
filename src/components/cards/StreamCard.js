@@ -22,8 +22,13 @@ const StreamCardWrapper = styled.div`
     border-radius: 10px;
     border-bottom-right-radius: 20px;
     color: #fff;
-    background-image: url(https://source.unsplash.com/random/300x200/?videogame);
-    opacity: 0.8;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(0, 0, 0, 0.9)
+      ),
+      url(https://source.unsplash.com/random/300x200/?videogame);
+    // opacity: 0.8;
   }
 
   .top-left {
@@ -33,7 +38,7 @@ const StreamCardWrapper = styled.div`
     left: 0;
     height: 1.5em;
     width: 9em;
-    background: grey;
+    background: rgba(0, 0, 0, 0.5);
     margin: 0.5em 0 0 0.5em;
     border-radius: 50vh;
   }
@@ -82,15 +87,15 @@ const StreamCardWrapper = styled.div`
     top: 0;
     right: 0;
     margin: 0.5em 0.5em 0 0;
+    overflow: hidden;
   }
 
   .top-right div {
-    background: grey;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 50vh;
     height: 1.5em;
     width: 1.5em;
     display: flex;
-    align-items: center;
     justify-content: center;
   }
 

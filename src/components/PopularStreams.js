@@ -14,7 +14,11 @@ const PopularStreamsWrapper = styled.div`
     margin-bottom: 1rem;
   }
   .header {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .header span {
+    color: ${(props) => props.theme.colors.textSecondary};
   }
 
   .content {

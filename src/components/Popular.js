@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import PopularStreamsCard from '../components/cards/PopularStreamsCard';
+import PopularTrendingStreamsCard from '../components/cards/PopularTrendingStreamsCard';
+import PopularEsportsMatchesCard from '../components/cards/PopularEsportsMatchesCard';
 
 import { ReactComponent as RightChevronIcon } from '../img/right-chevron.svg';
 
@@ -80,6 +82,8 @@ const PopularWrapper = styled.div`
     border: 1px solid black;
     border-radius: 1rem;
     height: 206px;
+    background: url(https://source.unsplash.com/random/400x300/?videogame);
+    background-size: 100% 100%;
   }
 
   .separator {
@@ -139,11 +143,11 @@ const Popular = () => {
                 <a href='#!'>Esports matches</a>
                 <RightChevronIcon className='arrow' />
               </h2>
-              <div className='card'></div>
+              <PopularEsportsMatchesCard />
             </div>
             <div className='trending-streams-card'>
               <h2 className='card-header'>Trending streams</h2>
-              <div className='card'></div>
+              <PopularTrendingStreamsCard />
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import trophy from '../../img/trophy.svg';
+import trending from '../../img/trending.svg';
 import avatar from '../../img/avatar.png';
 
-const PopularStreamsCardWrapper = styled.div`
+const PopularTrendingStreamsCardWrapper = styled.div`
   cursor: pointer;
   :hover .overlay {
     transition: transform 150ms ease;
@@ -109,20 +109,13 @@ const PopularStreamsCardWrapper = styled.div`
   }
 
   .overlay-footer .icon {
-    height: 1.25em;
-    width: 1.25em;
-    background: #fff;
-    border-radius: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .overlay-footer .icon div {
-    background-image: url(${trophy});
+    height: 1.5em;
+    width: 1.5em;
     background-size: 100% 100%;
-    height: 75%;
-    width: 75%;
+    background-color: #fff;
+    -webkit-mask-image: url(${trending});
+    mask-image: url(${trending});
+    mask-size: cover;
   }
 
   .overlay-footer p {
@@ -151,9 +144,9 @@ const PopularStreamsCardWrapper = styled.div`
   }
 `;
 
-const PopularStreamsCard = () => {
+const PopularTrendingStreamsCard = () => {
   return (
-    <PopularStreamsCardWrapper>
+    <PopularTrendingStreamsCardWrapper>
       <div className='card-body'>
         <div className='center'>
           <div className='play-btn'>
@@ -171,18 +164,15 @@ const PopularStreamsCard = () => {
             </div>
           </div>
           <div className='overlay-footer'>
-            <div className='icon'>
-              <div></div>
-            </div>
-            &nbsp;
+            <div className='icon'></div>
             <p>
-              — Most viewers now: <span>63.2k viewers</span>
+              — Overachieving <span>881 viewers</span>
             </p>
           </div>
         </div>
       </div>
-    </PopularStreamsCardWrapper>
+    </PopularTrendingStreamsCardWrapper>
   );
 };
 
-export default PopularStreamsCard;
+export default PopularTrendingStreamsCard;

@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import trophy from '../../img/trophy.svg';
-import avatar from '../../img/avatar.png';
+import streamer1 from '../../img/streamer-1.jpg';
+import streamer2 from '../../img/streamer-2.jpg';
+import swords from '../../img/swords.svg';
+import avatar from '../../img/avatar-2.png';
 
-const PopularStreamsCardWrapper = styled.div`
+const PopularEsportsMatchesCardWrapper = styled.div`
   cursor: pointer;
   :hover .overlay {
     transition: transform 150ms ease;
@@ -24,7 +26,7 @@ const PopularStreamsCardWrapper = styled.div`
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0) 20%,
-        rgba(0, 0, 0, 0.9)
+        rgba(0, 0, 0, 1)
       ),
       url(https://source.unsplash.com/random/400x300/?videogame);
     background-size: 100% 100%;
@@ -103,34 +105,67 @@ const PopularStreamsCardWrapper = styled.div`
     display: flex;
     align-items: center;
     padding-left: 1em;
+    padding-right: 1em;
     height: 2.5em;
     border-top: 0.5px solid lightgrey;
     transition: 150ms ease-in-out;
-  }
-
-  .overlay-footer .icon {
-    height: 1.25em;
-    width: 1.25em;
-    background: #fff;
-    border-radius: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .overlay-footer .icon div {
-    background-image: url(${trophy});
-    background-size: 100% 100%;
-    height: 75%;
-    width: 75%;
+    justify-content: space-between;
   }
 
   .overlay-footer p {
     font-size: 0.75rem;
+    margin: 0 0.75em;
   }
 
   .overlay-footer p span {
     font-weight: 600;
+  }
+
+  .overlay-footer .left,
+  .overlay-footer .right {
+    display: flex;
+    align-items: center;
+  }
+
+  .overlay-footer .left .team,
+  .overlay-footer .right .team {
+    height: 2em;
+    width: 2em;
+    border-radius: 50vh;
+  }
+
+  .overlay-footer .left p,
+  .overlay-footer .right p {
+    display: none;
+  }
+
+  .overlay-footer .left .team {
+    background-image: url(${streamer1});
+    background-size: 100% 100%;
+  }
+
+  .overlay-footer .right .team {
+    background-image: url(${streamer2});
+    background-size: 100% 100%;
+  }
+
+  .overlay-footer .middle {
+    display: flex;
+    align-items: center;
+  }
+
+  .overlay-footer .middle p {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .overlay-footer .middle div {
+    background-color: #999;
+    -webkit-mask-image: url(${swords});
+    mask-image: url(${swords});
+    background-size: 100% 100%;
+    height: 1.25em;
+    width: 1.25em;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
@@ -144,16 +179,31 @@ const PopularStreamsCardWrapper = styled.div`
     .overlay-footer {
       height: 3.5em;
     }
-    .overlay-footer .icon {
-      margin-left: 1em;
-      margin-right: 0.25em;
+    .overlay-footer .left .team,
+    .overlay-footer .right .team {
+      height: 2.5em;
+      width: 2.5em;
+    }
+
+    .overlay-footer .left p,
+    .overlay-footer .right p {
+      display: block;
+    }
+
+    .overlay-footer .middle p {
+      font-size: 1.5rem;
+    }
+
+    .overlay-footer .middle div {
+      height: 1.25em;
+      width: 1.25em;
     }
   }
 `;
 
-const PopularStreamsCard = () => {
+const PopularEsportsMatchesCard = () => {
   return (
-    <PopularStreamsCardWrapper>
+    <PopularEsportsMatchesCardWrapper>
       <div className='card-body'>
         <div className='center'>
           <div className='play-btn'>
@@ -166,23 +216,29 @@ const PopularStreamsCard = () => {
               <img src={avatar} alt='avatar' />
             </div>
             <div className='description'>
-              <p>WePlayEsport_EN</p>
+              <p>ESL_DOTA2</p>
               <p>Dota 2</p>
             </div>
           </div>
           <div className='overlay-footer'>
-            <div className='icon'>
-              <div></div>
+            <div className='left'>
+              <div className='team'></div>
+              <p className='team-name'>FNC</p>
             </div>
-            &nbsp;
-            <p>
-              — Most viewers now: <span>63.2k viewers</span>
-            </p>
+            <div className='middle'>
+              <p>1</p>
+              <div></div>
+              <p>1</p>
+            </div>
+            <div className='right'>
+              <p className='team-name'>BOOM</p>
+              <div className='team'></div>
+            </div>
           </div>
         </div>
       </div>
-    </PopularStreamsCardWrapper>
+    </PopularEsportsMatchesCardWrapper>
   );
 };
 
-export default PopularStreamsCard;
+export default PopularEsportsMatchesCard;
