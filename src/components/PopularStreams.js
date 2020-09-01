@@ -94,7 +94,6 @@ const PopularStreamsWrapper = styled.div`
 const PopularStreams = () => {
   return (
     <PopularStreamsWrapper>
-      {' '}
       <div className='header'>
         <h1>Popular Streams</h1>
         <span>The most viewers right now on Twitch</span>

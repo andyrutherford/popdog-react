@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Popular from './components/Popular';
 import TopGames from './components/TopGames';
 import PopularStreams from './components/PopularStreams';
+import TrendingStreams from './components/TrendingStreams';
 import Footer from './components/Footer';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <TopGames />
           <PopularStreams />
         </Container>
+        <TrendingStreams />
         <Footer />
       </div>
     </Theme>
