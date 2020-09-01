@@ -8,12 +8,28 @@ import user from '../../img/user.svg';
 const TrendingStreamsCardWrapper = styled.div`
   width: 335px;
   height: 184px;
-  border-radius: 10px;
+  border-radius: 16px;
   margin: auto;
-  background-color: lightgrey;
   color: #fff;
-
   position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(https://source.unsplash.com/random/762x406/?videogame);
+  transition: 150ms ease-in-out;
+
+
+  :hover {
+    -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  :hover .center {
+    opacity: 1;
+   
+  }
+
 
   .overlay {
     position: absolute;
@@ -142,6 +158,45 @@ const TrendingStreamsCardWrapper = styled.div`
     width: 562px;
     height: 294px;
 
+    .card-body {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: opacity 200ms ease-out 0s;
+      background: rgba(0, 0, 0, 0) linear-gradient(270deg, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.75) 100%) repeat scroll 0% 0%;
+      opacity: 1;
+    }
+
+    
+    .center {
+      position: absolute;
+      top: calc(50% - 4em);
+      left: calc(50% - 2em);
+      opacity: 0;
+      transition: 250ms ease-in-out;
+    }
+
+    .play-btn {
+      height: 4em;
+      width: 4em;
+      background: red;
+      border-radius: 50vh;
+    }
+
+    .play-btn div {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      clip-path: polygon(35% 25%, 35% 75%, 78% 50%);
+    }
+
     .overlay {
       padding:1em;
       justify-content: flex-end;
@@ -172,6 +227,17 @@ const TrendingStreamsCardWrapper = styled.div`
     width: 810px;
     height: 454px;
     padding-left: 1.5em;
+
+
+    .center {
+      top: calc(50% - 2.5em);
+      left: calc(50% - 2.5em);
+    }
+
+    .play-btn {
+      height: 5em;
+      width: 5em;
+    }
 
     .overlay {
       width: 60%;
