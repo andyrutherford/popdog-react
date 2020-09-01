@@ -117,7 +117,7 @@ const FooterWrapper = styled.div`
     }
   }
 
-  @media (min-width: 1288px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.xl}) {
     .footer-content {
       max-width: 1260px;
     }

@@ -28,5 +28,6 @@ export default {
 
   breakpoints: {
     lg: '972px',
+    xl: '1288px',
   },
 };

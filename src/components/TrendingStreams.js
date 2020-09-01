@@ -9,15 +9,27 @@ const TrendingStreamsWrapper = styled.div`
   h1 {
     font: 600 2rem / 48px Poppins, Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
-    margin-bottom: 1rem;
+
   }
   .header {
     margin-bottom: 1em;
+    text-align: center;
   }
 
   .header span {
     color: ${(props) => props.theme.colors.textSecondary};
   }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    h1 {
+      font-size: 2.5rem;
+      margin-botton: 0;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 `;
 
 const TrendingStreams = () => {
@@ -25,8 +37,8 @@ const TrendingStreams = () => {
     <TrendingStreamsWrapper>
       <Container>
         <div className='header'>
-          <h1>Popular Streams</h1>
-          <span>The most viewers right now on Twitch</span>
+          <h1>Trending Streams</h1>
+          <span>Find new favorites from these overachievers</span>
         </div>
         <TrendingStreamsCard />
       </Container>

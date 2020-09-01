@@ -6,11 +6,11 @@ const Container = styled.div`
   height: 100%;
   max-width: 1260px;
 
-  @media (min-width: 972px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     max-width: 908px;
   }
 
-  @media (min-width: 1288px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 1260px;
   }
 `;

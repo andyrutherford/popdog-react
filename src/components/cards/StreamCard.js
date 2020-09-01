@@ -28,7 +28,6 @@ const StreamCardWrapper = styled.div`
         rgba(0, 0, 0, 0.9)
       ),
       url(https://source.unsplash.com/random/300x200/?videogame);
-    // opacity: 0.8;
   }
 
   .top-left {
