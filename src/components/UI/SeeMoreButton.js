@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const SeeMoreButton = styled.a`
   display: inline-block;
@@ -19,29 +19,3 @@ const SeeMoreButton = styled.a`
 `;
 
 export default SeeMoreButton;
-
-//   ${(props) =>
-//     props.secondary &&
-//     css`
-//       color: black;
-//       background-color: transparent;
-//       border: 1px solid #d3d3d3;
-//     `}
-//   ${(props) =>
-//     props.link &&
-//     css`
-//       color: black;
-//       background-color: transparent;
-//       border: none;
-//       margin: 0;
-//       padding: 0;
-//     `}
-//   ${(props) =>
-//     props.tab &&
-//     css`
-//       background-color: transparent;
-//       padding: 0;
-//       margin: 0;
-//       border: none;
-//       color: black;
-//     `}
