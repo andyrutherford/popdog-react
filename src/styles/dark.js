@@ -18,14 +18,19 @@ export default {
     textSecondary: '#919597', //ok
     textThird: '#fff', //ok
 
-    mainBackground: '#000',
+    linePrimary: '#5b5d5e',
+
+    mainBackground: '#0d1113',
     cardBackground: '#000',
+    footerBackground:
+      'linear-gradient(360deg, rgba(45, 41, 51, 0.75) 0%, rgba(45, 41, 51, 0) 100%)',
+
     btnPrimary: '#3a86f9',
-    btnSecondary: '#eff5ff',
+    btnSecondary: '#101e34',
 
     hoverPrimary: '#3a86f9',
-    hoverSecondary: '#f6f7f7',
-    socialLinkHover: '#000',
+    hoverSecondary: '#343739',
+    socialLinkHover: '#fff',
     footerLink: '#919597',
   },
 

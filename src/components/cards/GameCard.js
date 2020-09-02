@@ -141,7 +141,7 @@ const GameCardWrapper = styled.div`
   }
 
   .background {
-    background: #eee;
+    background: green;
     position: absolute;
     top: 0;
     bottom: 0;

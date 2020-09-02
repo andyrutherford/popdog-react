@@ -7,12 +7,7 @@ import { ReactComponent as TwitterIcon } from '../img/twitter.svg';
 import { ReactComponent as InstagramIcon } from '../img/instagram.svg';
 
 const FooterWrapper = styled.div`
-  background: rgba(0, 0, 0, 0)
-    linear-gradient(
-      360deg,
-      rgba(235, 241, 245, 0.75) 0%,
-      rgba(235, 241, 245, 0) 100%
-    )
+  background: rgba(0, 0, 0, 0) ${(props) => props.theme.colors.footerBackground}
     repeat scroll 0% 0%;
   padding-top: 8rem;
   padding-bottom: 5rem;
@@ -20,6 +15,7 @@ const FooterWrapper = styled.div`
   font-weight: 300;
 
   a,
+  a:visited,
   p {
     color: ${(props) => props.theme.colors.footerLink};
   }
@@ -54,7 +50,7 @@ const FooterWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    border-right: 1px solid rgb(211, 216, 219);
+    border-right: 1px solid ${(props) => props.theme.colors.linePrimary};
     padding-right: 1.5rem;
     width: 50%;
   }

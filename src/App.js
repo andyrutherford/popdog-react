@@ -26,7 +26,7 @@ const App = () => {
       <GlobalStyle />
       <div
         className='App'
-        style={{ backgroundColor: isDarkMode ? '#000' : '#fff' }}
+        style={{ backgroundColor: isDarkMode ? '#0d1113' : '#fff' }}
       >
         <Navbar themeHandler={themeHandler} isDarkMode={isDarkMode} />
         <Container>

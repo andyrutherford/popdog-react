@@ -11,6 +11,7 @@ const PopularWrapper = styled.div`
   padding-bottom: 2rem;
 
   h2 {
+    color: ${(props) => props.theme.colors.textPrimary};
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: -1px;
@@ -28,6 +29,8 @@ const PopularWrapper = styled.div`
     background-position-y: 5px;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
+    border-color: ${(props) => props.theme.colors.linePrimary};
+    color: ${(props) => props.theme.colors.textPrimary};
   }
 
   a {

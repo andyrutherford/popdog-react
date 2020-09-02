@@ -15,15 +15,15 @@ const NavbarWrapper = styled.div`
   max-width: 1260px;
   margin: auto;
   border-bottom: 1px solid grey;
-  /* background: ${(props) => props.theme.colors.cardBackground}; */
 
   a {
     padding-top: 8px;
     padding-bottom: 4px;
-    margin-right: 24px;
+    margin-right: 0.5em;
     color: #000;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.875rem;
   }
 
   li {
@@ -46,11 +46,21 @@ const NavbarWrapper = styled.div`
     margin-left: 40px;
   }
 
+  .nav-left-links li a {
+    color: ${(props) => props.theme.colors.textPrimary};
+    transition: 250ms;
+    margin-right: 1.5em;
+  }
+
+  .nav-left-links li a:hover {
+    color: ${(props) => props.theme.colors.btnPrimary};
+  }
+
   .divider {
     height: 24px;
     width: 1px;
     display: block;
-    background-color: rgb(227, 232, 235);
+    background-color: ${(props) => props.theme.colors.hoverSecondary};
   }
 
   .nav-right {
@@ -65,21 +75,56 @@ const NavbarWrapper = styled.div`
     display: flex;
     align-items: center;
     margin: 0 15px;
+    border-radius: 50vh;
+  }
+
+  #search-btn:hover {
+    background-color: ${(props) => props.theme.colors.hoverSecondary};
+  }
+
+  #search-btn svg {
+    stroke: ${(props) => props.theme.colors.textThird};
   }
 
   #theme-btn {
-    padding: 10px;
+    width: 3.5em;
+    height: 3.5em;
+    padding: 1em;
     background-color: ${(props) => props.theme.colors.hoverSecondary};
+    border: none;
     border-radius: 100%;
+    color: ${(props) => props.theme.colors.textPrimary};
     display: flex;
     align-items: center;
     margin: 0 15px;
   }
 
+  #theme-btn svg {
+    stroke: ${(props) => props.theme.colors.textThird};
+  }
+
+  #theme-btn:hover {
+    background-color: ${(props) => props.theme.colors.textThird};
+  }
+
+  #theme-btn:hover svg {
+    stroke: ${(props) => props.theme.colors.mainBackground};
+  }
+
   #login-btn {
     color: ${(props) => props.theme.colors.btnPrimary};
+    display: inline-block;
+    border-radius: 50vh;
+    padding: 11px 24px;
+    line-height: 1rem;
+  }
+
+  #login-btn:hover {
+    background: ${(props) => props.theme.colors.btnSecondary};
   }
   #join-btn {
+    display: inline-block;
+    line-height: 1rem;
     background: ${(props) => props.theme.colors.btnPrimary} none repeat scroll
       0% 0%;
     color: #fff;
@@ -109,21 +154,27 @@ const Navbar = ({ themeHandler, isDarkMode }) => {
         </nav>
       </div>
       <div className='nav-right'>
-        <div id='search-btn'>
-          <SearchIcon size={18} />
-        </div>
+        <a href='#!'>
+          <div id='search-btn'>
+            <SearchIcon size={18} />
+          </div>
+        </a>
         <div className='divider'></div>
-        <div id='theme-btn'>
-          <button onClick={() => themeHandler()}>
+        <div>
+          <button id='theme-btn' onClick={() => themeHandler()}>
             <ThemeIcon size={18} backgroundColor='#f6f7f7' />
           </button>
         </div>{' '}
-        <a id='login-btn' href='#!'>
-          Log in
-        </a>
-        <a id='join-btn' href='#!'>
-          Join Now
-        </a>
+        <div>
+          <a id='login-btn' href='#!'>
+            Log in
+          </a>
+        </div>
+        <div>
+          <a id='join-btn' href='#!'>
+            Join Now
+          </a>
+        </div>
       </div>
     </NavbarWrapper>
   );

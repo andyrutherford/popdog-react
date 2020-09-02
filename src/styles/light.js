@@ -18,8 +18,13 @@ export default {
     textSecondary: '#919597',
     textThird: '#494d4f',
 
+    linePrimary: '#c0c5c8',
+
     mainBackground: '#fff',
     cardBackground: '#fff',
+    footerBackground:
+      'linear-gradient(360deg,rgba(235, 241, 245, 0.75) 0%,rgba(235, 241, 245, 0) 100%)',
+
     btnPrimary: '#3a86f9',
     btnSecondary: '#eff5ff',
 

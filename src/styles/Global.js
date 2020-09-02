@@ -32,7 +32,10 @@ const Global = createGlobalStyle`
 	}
 	a:visited {
 		color: #3a86f9;
-	  }
+	}
+	button {
+		cursor: pointer;
+	}
 	ul {
 		list-style-type: none;
 	}

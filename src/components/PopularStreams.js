@@ -44,7 +44,7 @@ const PopularStreamsWrapper = styled.div`
 
   .separator-line hr {
     width: 100%;
-    border: 0.5px solid rgb(227, 232, 235);
+    border: 0.5px solid ${(props) => props.theme.colors.linePrimary};
   }
 
   .separator-btn a:after {
@@ -68,7 +68,7 @@ const PopularStreamsWrapper = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     h1 {
       font-size: 2.5rem;
-      margin-botton: 0;
+      margin-bottom: 0;
     }
     .header {
       display: flex;

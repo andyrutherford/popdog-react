@@ -7,36 +7,36 @@ import youtube from '../img/youtube.svg';
 import stars from '../img/stars.svg';
 
 const HeaderWrapper = styled.div`
-position: relative;
+  position: relative;
 
-h1 {
+  h1 {
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: -1px;
-    margin: .5em 0;
-    color: ${(props) => props.theme.colors.textPrimary}
-}
+    margin: 0.5em 0;
+    color: ${(props) => props.theme.colors.textPrimary};
+  }
 
-p {
+  p {
     font-size: 0.9rem;
     font-weight: 400;
     margin: 16px 0 32px;
-}
+  }
 
-.btn {
+  .btn {
     padding: 10px 20px;
     background: ${(props) => props.theme.colors.btnPrimary};
     color: #fff;
     border-radius: 50vh;
     text-decoration: none;
-}
+  }
 
-.btn:hover {
+  .btn:hover {
     box-shadow: rgba(32, 98, 225, 0.25) 0px 4px 4px;
     background: rgb(32, 98, 225) none repeat scroll 0% 0%;
-}
+  }
 
-.header-background {
+  .header-background {
     background-image: url(${stars});
     background-position: right center;
     background-size: contain;
@@ -48,91 +48,90 @@ p {
     bottom: 20%;
     right: 0px;
     position: absolute;
-}
+  }
 
-.header-content {
+  .header-content {
     padding: 32px 0;
+  }
 
-}
-
-.header-left {
+  .header-left {
     text-align: center;
     z-index: 1;
-}
+  }
 
-.header-description {
-  color: ${(props) => props.theme.colors.textPrimary};
-  font-weight: 300;
-}
+  .header-description {
+    color: ${(props) => props.theme.colors.textPrimary};
+    font-weight: 300;
+  }
 
-.social-icons-right {
+  .social-icons-right {
     width: 175px;
     position: relative;
-}
+  }
 
-.dog-img {
+  .dog-img {
     display: none;
     max-width: 328px;
     height: 350px;
     z-index: 1;
-}
+  }
 
-@media (min-width: 972px) {
+  @media (min-width: 972px) {
     h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        line-height: 1;
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
     }
 
     .header-content {
-        display: flex;
-        justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
     }
 
     .header-left {
-        max-width: 600px;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+      max-width: 600px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     }
     .header-description {
       color: ${(props) => props.theme.colors.textSecondary};
     }
 
     .header-right {
-        display: flex;
+      display: flex;
     }
 
     .social-icons-right {
-        width: 175px;
-        position: relative;
+      width: 175px;
+      position: relative;
     }
 
     .dog-img {
-        display: inline;
+      display: inline;
     }
 
     #twitch {
-        position: relative;
-        top: 54px;
-        left: calc(100% - 111px);
-        width: 80px;
-        height: 80px;
-        background-repeat: no-repeat;
-        background-image: url(${twitch});
+      position: relative;
+      top: 54px;
+      left: calc(100% - 111px);
+      width: 80px;
+      height: 80px;
+      background-repeat: no-repeat;
+      background-image: url(${twitch});
     }
     #youtube {
-        position: relative;
-        top: 118px;
-        left: calc(100% - 167px);
-        width: 80px;
-        height: 80px;
-        background-repeat: no-repeat;
-        background-image: url(${youtube});
+      position: relative;
+      top: 118px;
+      left: calc(100% - 167px);
+      width: 80px;
+      height: 80px;
+      background-repeat: no-repeat;
+      background-image: url(${youtube});
     }
-})
+  }
 `;
 
 const Header = () => {

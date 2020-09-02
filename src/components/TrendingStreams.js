@@ -9,7 +9,6 @@ const TrendingStreamsWrapper = styled.div`
   h1 {
     font: 600 2rem / 48px Poppins, Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
-
   }
   .header {
     margin-bottom: 1em;
@@ -23,13 +22,14 @@ const TrendingStreamsWrapper = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     h1 {
       font-size: 2.5rem;
-      margin-botton: 0;
+      margin-bottom: 0;
     }
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+  }
 `;
 
 const TrendingStreams = () => {

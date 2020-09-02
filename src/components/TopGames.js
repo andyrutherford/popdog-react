@@ -8,6 +8,7 @@ import controller from '../img/game-controller.svg';
 
 const TopGamesWrapper = styled.div`
   h1 {
+    color: ${(props) => props.theme.colors.textPrimary};
     font: 600 2rem / 48px Poppins, Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
     margin-bottom: 1rem;
@@ -24,6 +25,8 @@ const TopGamesWrapper = styled.div`
     background-position-y: 5px;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
+    border-color: ${(props) => props.theme.colors.linePrimary};
+    color: ${(props) => props.theme.colors.textPrimary};
   }
 
   .header {
@@ -75,7 +78,7 @@ const TopGamesWrapper = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     h1 {
       font-size: 2.5rem;
-      margin-botton: 0;
+      margin-bottom: 0;
     }
     select {
       width: 200px;
