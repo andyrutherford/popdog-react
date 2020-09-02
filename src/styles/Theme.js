@@ -1,7 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import light from './light';
+import lightTheme from './light';
+import darkTheme from './dark';
 
 // import lightTheme from './lightTheme';
 // import darkTheme from './darkTheme';
@@ -12,8 +13,10 @@ import light from './light';
 //   </ThemeProvider>
 // );
 
-const Theme = ({ children }) => (
-  <ThemeProvider theme={light}>{children}</ThemeProvider>
+const Theme = ({ children, darkMode }) => (
+  <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    {children}
+  </ThemeProvider>
 );
 
 export default Theme;

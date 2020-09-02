@@ -14,6 +14,7 @@ h1 {
     font-weight: 600;
     letter-spacing: -1px;
     margin: .5em 0;
+    color: ${(props) => props.theme.colors.textPrimary}
 }
 
 p {

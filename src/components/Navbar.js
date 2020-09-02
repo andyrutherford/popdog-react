@@ -15,6 +15,7 @@ const NavbarWrapper = styled.div`
   max-width: 1260px;
   margin: auto;
   border-bottom: 1px solid grey;
+  /* background: ${(props) => props.theme.colors.cardBackground}; */
 
   a {
     padding-top: 8px;
@@ -88,7 +89,7 @@ const NavbarWrapper = styled.div`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ themeHandler, isDarkMode }) => {
   return (
     <NavbarWrapper>
       <div className='nav-left'>
@@ -113,7 +114,9 @@ const Navbar = () => {
         </div>
         <div className='divider'></div>
         <div id='theme-btn'>
-          <ThemeIcon size={18} backgroundColor='#f6f7f7' />
+          <button onClick={() => themeHandler()}>
+            <ThemeIcon size={18} backgroundColor='#f6f7f7' />
+          </button>
         </div>{' '}
         <a id='login-btn' href='#!'>
           Log in

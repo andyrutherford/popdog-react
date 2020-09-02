@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { default as GlobalStyle } from './styles/Global';
 import Theme from './styles/Theme';
@@ -13,11 +13,22 @@ import TrendingStreams from './components/TrendingStreams';
 import Footer from './components/Footer';
 
 const App = () => {
+  const stored = localStorage.getItem('isDarkMode');
+  const [isDarkMode, setIsDarkMode] = useState(
+    stored === 'true' ? true : false
+  );
+  const themeHandler = () => {
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('isDarkMode', !isDarkMode);
+  };
   return (
-    <Theme>
+    <Theme darkMode={isDarkMode}>
       <GlobalStyle />
-      <div className='App'>
-        <Navbar />
+      <div
+        className='App'
+        style={{ backgroundColor: isDarkMode ? '#000' : '#fff' }}
+      >
+        <Navbar themeHandler={themeHandler} isDarkMode={isDarkMode} />
         <Container>
           <Header />
           <Popular />

@@ -5,6 +5,7 @@ const Container = styled.div`
   padding: 0 16px;
   height: 100%;
   max-width: 1260px;
+  background: ${(props) => props.theme.colors.mainBackground};
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     max-width: 908px;

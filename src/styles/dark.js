@@ -8,18 +8,18 @@ export default {
     // casesColor: '#3b5892',
     // deathsColor: '#8b0000',
     // recoveredColor: '#006400',
-    clrdark: 'rgb(13, 17, 19)',
-    clrlight: 'rgb(255, 255, 255)',
-    clraccent: 'rgb(222, 52, 0)',
-    clraccentdark: 'rgb(163, 38, 0)',
-    clrsecondary: 'rgb(0, 76, 200)',
+    //   clrdark: 'rgb(13, 17, 19)',
+    //   clrlight: 'rgb(255, 255, 255)',
+    //   clraccent: 'rgb(222, 52, 0)',
+    //   clraccentdark: 'rgb(163, 38, 0)',
+    //   clrsecondary: 'rgb(0, 76, 200)',
 
-    textPrimary: '#0d1113',
-    textSecondary: '#919597',
-    textThird: '#494d4f',
+    textPrimary: '#fff', //ok
+    textSecondary: '#919597', //ok
+    textThird: '#fff', //ok
 
-    mainBackground: '#fff',
-    cardBackground: '#fff',
+    mainBackground: '#000',
+    cardBackground: '#000',
     btnPrimary: '#3a86f9',
     btnSecondary: '#eff5ff',
 

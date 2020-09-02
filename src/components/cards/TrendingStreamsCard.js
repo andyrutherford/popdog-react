@@ -282,6 +282,7 @@ const TrendingStreamsCardWrapper = styled.div`
     .card-footer .nav svg {
       width: 100%;
       height: 100%;
+      stroke: ${(props) => props.theme.colors.textThird};
     }
 
     .card-footer .nav button:first-child {
