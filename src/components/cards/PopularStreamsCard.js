@@ -41,7 +41,6 @@ const PopularStreamsCardWrapper = styled.div`
     top: calc(50% - 3em);
     left: calc(50% - 2em);
     opacity: 0;
-    transition: 250ms;
   }
 
   .center:hover {

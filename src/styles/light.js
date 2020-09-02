@@ -16,12 +16,14 @@ export default {
 
     textPrimary: '#0d1113',
     textSecondary: '#919597',
+    textThird: '#494d4f',
 
     cardBackground: '#fff',
     btnPrimary: '#3a86f9',
     btnSecondary: '#eff5ff',
 
     hoverPrimary: '#3a86f9',
+    hoverSecondary: '#f6f7f7',
     socialLinkHover: '#000',
     footerLink: '#919597',
   },

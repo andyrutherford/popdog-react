@@ -68,7 +68,7 @@ const NavbarWrapper = styled.div`
 
   #theme-btn {
     padding: 10px;
-    background-color: #f6f7f7;
+    background-color: ${(props) => props.theme.colors.hoverSecondary};
     border-radius: 100%;
     display: flex;
     align-items: center;
