@@ -21,11 +21,16 @@ const GameCardWrapper = styled.div`
   .btn {
     cursor: pointer;
     border: 0;
-    background: ${(props) => props.theme.colors.clrsecondary};
+    background: ${(props) => props.theme.colors.btnPrimary};
     border-radius: 100vw;
-    color: ${(props) => props.theme.colors.clrlight};
+    color: ${(props) => props.theme.colors.textPrimary};
     font-weight: bold;
     padding: 0.5em 1.5em;
+  }
+
+  .btn:hover {
+    box-shadow: rgba(32, 98, 225, 0.25) 0px 4px 4px;
+    background: rgb(32, 98, 225) none repeat scroll 0% 0%;
   }
 
   .game {
@@ -65,6 +70,7 @@ const GameCardWrapper = styled.div`
   .front {
     -webkit-transition: 250ms;
     transition: 250ms;
+    color: ${(props) => props.theme.colors.textPrimary};
   }
 
   .front .thumbnail {
@@ -73,6 +79,8 @@ const GameCardWrapper = styled.div`
 
   .front .name {
     margin: 0.75em 0;
+    font-weight: 600;
+    font-size: 1em;
   }
 
   .front .stats {
@@ -88,7 +96,7 @@ const GameCardWrapper = styled.div`
   }
 
   .front .streamers img {
-    border: 2px solid ${(props) => props.theme.colors.clrdark};
+    border: 2px solid ${(props) => props.theme.colors.mainBackground};
   }
 
   .front .streamers img:nth-of-type(1) {
@@ -121,6 +129,7 @@ const GameCardWrapper = styled.div`
     gap: 1.5em;
     -webkit-transform: translateY(35%);
     transform: translateY(35%);
+    color: ${(props) => props.theme.colors.textPrimary};
   }
 
   .back .streaming-info {
@@ -137,7 +146,9 @@ const GameCardWrapper = styled.div`
 
   .back .game-stat span {
     font-size: 0.7rem;
+    font-weight: 300;
     display: block;
+    color: ${(props) => props.theme.colors.textSecondary};
   }
 
   .background {
