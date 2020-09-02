@@ -23,7 +23,7 @@ const GameCardWrapper = styled.div`
     border: 0;
     background: ${(props) => props.theme.colors.btnPrimary};
     border-radius: 100vw;
-    color: ${(props) => props.theme.colors.textPrimary};
+    color: #fff;
     font-weight: bold;
     padding: 0.5em 1.5em;
   }
