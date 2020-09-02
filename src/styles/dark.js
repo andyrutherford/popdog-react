@@ -21,7 +21,7 @@ export default {
     linePrimary: '#5b5d5e',
 
     mainBackground: '#0d1113',
-    cardBackground: '#000',
+    cardBackground: '#0d1113',
     footerBackground:
       'linear-gradient(360deg, rgba(45, 41, 51, 0.75) 0%, rgba(45, 41, 51, 0) 100%)',
 

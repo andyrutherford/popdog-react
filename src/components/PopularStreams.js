@@ -9,6 +9,7 @@ import rightarrow from '../img/right-arrow.svg';
 const PopularStreamsWrapper = styled.div`
   padding: 4rem 0 2rem;
   h1 {
+    color: ${(props) => props.theme.colors.textPrimary};
     font: 600 2rem / 48px Poppins, Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
     margin-bottom: 1rem;

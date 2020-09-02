@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { ReactComponent as MicIcon } from '../../img/mic.svg';
 import { ReactComponent as FlameIcon } from '../../img/flame.svg';
 import user from '../../img/user.svg';
+import streamer from '../../img/streamer-3.jpg';
 import { ReactComponent as LeftChevron } from '../../img/left-chevron.svg';
 import { ReactComponent as RightChevron } from '../../img/right-chevron.svg';
 
@@ -191,9 +192,23 @@ const TrendingStreamsCardWrapper = styled.div`
     margin-right: 0.75em;
   }
 
+  .card-footer .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
   .card-footer .user .username {
     font-weight: 700;
     font-size: 1em;
+  }
+
+  .username a {
+    color: ${(props) => props.theme.colors.textPrimary};
+  }
+
+  .username a:hover {
+    color: ${(props) => props.theme.colors.hoverPrimary};
   }
 
   .card-footer .nav {
@@ -365,8 +380,12 @@ const TrendingStreamsCard = () => {
       </div>
       <div className='card-footer'>
         <div className='user'>
-          <div className='avatar'></div>{' '}
-          <span className='username'>Autophil</span>
+          <div className='avatar'>
+            <img src={streamer} alt='streamer' />
+          </div>
+          <span className='username'>
+            <a href='#!'>Autophil</a>
+          </span>
         </div>
         <div className='nav'>
           <button className='left'>

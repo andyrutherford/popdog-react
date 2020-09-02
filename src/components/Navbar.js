@@ -105,6 +105,7 @@ const NavbarWrapper = styled.div`
 
   #theme-btn:hover {
     background-color: ${(props) => props.theme.colors.textThird};
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
   }
 
   #theme-btn:hover svg {
@@ -131,6 +132,11 @@ const NavbarWrapper = styled.div`
     border-radius: 50vh;
     padding: 11px 24px;
     margin: 0;
+  }
+
+  #join-btn:hover {
+    box-shadow: rgba(32, 98, 225, 0.25) 0px 4px 4px;
+    background: rgb(32, 98, 225) none repeat scroll 0% 0%;
   }
 `;
 

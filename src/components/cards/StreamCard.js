@@ -155,6 +155,10 @@ const StreamCardWrapper = styled.div`
     box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 
+  :hover .description {
+    background: ${(props) => props.theme.colors.hoverSecondary};
+  }
+
   :hover .image {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -183,11 +187,16 @@ const StreamCardWrapper = styled.div`
     background: ${(props) => props.theme.colors.cardBackground};
     padding: 1em 0.5em 0.5em 0.5em;
     border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 
   .description .title {
     font-weight: bold;
     color: ${(props) => props.theme.colors.btnPrimary};
+  }
+  .description p {
+    color: ${(props) => props.theme.colors.textPrimary};
   }
 `;
 

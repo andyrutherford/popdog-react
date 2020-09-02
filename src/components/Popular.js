@@ -72,13 +72,22 @@ const PopularWrapper = styled.div`
     background: ${(props) => props.theme.colors.btnSecondary};
     stroke: ${(props) => props.theme.colors.btnPrimary};
     border-radius: 50vh;
-    width: 30px;
+    height: 1.25em;
+    width: 1.25em;
   }
 
   .card-header {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+  }
+
+  .card-header a {
+    color: ${(props) => props.theme.colors.textPrimary};
+  }
+
+  .card-header a:hover {
+    color: ${(props) => props.theme.colors.hoverPrimary};
   }
 
   .card {
@@ -108,10 +117,6 @@ const PopularWrapper = styled.div`
   @media (min-width: 972px) {
     h2 {
       font-size: 2rem;
-    }
-
-    .arrow {
-      width: 40px;
     }
 
     .content {

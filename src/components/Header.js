@@ -64,6 +64,10 @@ const HeaderWrapper = styled.div`
     font-weight: 300;
   }
 
+  .header-description a:hover {
+    text-decoration: underline;
+  }
+
   .social-icons-right {
     width: 175px;
     position: relative;
