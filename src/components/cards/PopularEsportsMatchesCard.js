@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import PlayButton from '../UI/PlayButton';
+
 import streamer1 from '../../img/streamer-1.jpg';
 import streamer2 from '../../img/streamer-2.jpg';
 import swords from '../../img/swords.svg';
 import avatar from '../../img/avatar-2.png';
-
-import PlayButton from '../UI/PlayButton';
 
 const PopularEsportsMatchesCardWrapper = styled.div`
   cursor: pointer;
@@ -20,7 +20,6 @@ const PopularEsportsMatchesCardWrapper = styled.div`
 
   :hover .center {
     opacity: 1;
-    /* transition: opacity 250ms ease; */
     transform: translateY(10%);
   }
 

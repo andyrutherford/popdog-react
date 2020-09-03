@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import PlayButton from '../UI/PlayButton';
+
 import trophy from '../../img/trophy.svg';
 import avatar from '../../img/avatar.png';
 
@@ -16,7 +18,7 @@ const PopularStreamsCardWrapper = styled.div`
 
   :hover .center {
     opacity: 1;
-    transition: opacity 250ms ease;
+    transform: translateY(10%);
   }
 
   .card-body {
@@ -41,25 +43,12 @@ const PopularStreamsCardWrapper = styled.div`
     top: calc(50% - 3em);
     left: calc(50% - 2em);
     opacity: 0;
+    transition: all ease-in-out 150ms;
   }
 
   .center:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) translateY(10%);
     transition: transform 150ms ease-in-out;
-  }
-
-  .play-btn {
-    height: 4em;
-    width: 4em;
-    background: red;
-    border-radius: 50vh;
-  }
-
-  .play-btn div {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    clip-path: polygon(35% 25%, 35% 75%, 78% 50%);
   }
 
   .overlay {
@@ -155,9 +144,7 @@ const PopularStreamsCard = () => {
     <PopularStreamsCardWrapper>
       <div className='card-body'>
         <div className='center'>
-          <div className='play-btn'>
-            <div></div>
-          </div>
+          <PlayButton />
         </div>
         <div className='overlay'>
           <div className='overlay-header'>

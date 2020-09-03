@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import PlayButton from '../UI/PlayButton';
+
 import user from '../../img/user.svg';
 import { ReactComponent as TwitchIcon } from '../../img/twitch-small.svg';
 import streamer1 from '../../img/streamer-1.jpg';
@@ -10,6 +12,39 @@ const StreamCardWrapper = styled.div`
   height: 231px;
   border-radius: 10px;
   transition: all 150ms ease-in-out;
+
+  :hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  :hover .description {
+    background: ${(props) => props.theme.colors.hoverSecondary};
+  }
+
+  :hover .image {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    opacity: 1;
+    transition: all 150ms ease-in-out;
+  }
+
+  :hover .top-right div {
+    transition: all 150ms ease-in-out;
+    width: 110px;
+    background: #9147ff;
+  }
+
+  :hover .top-right div span {
+    display: inline;
+  }
+
+  :hover .center {
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+  }
 
   .image {
     position: relative;
@@ -28,6 +63,7 @@ const StreamCardWrapper = styled.div`
         rgba(0, 0, 0, 0.9)
       ),
       url(https://source.unsplash.com/random/300x200/?videogame);
+    transition: all 150ms ease-in-out;
   }
 
   .top-left {
@@ -95,7 +131,9 @@ const StreamCardWrapper = styled.div`
     height: 1.5em;
     width: 1.5em;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    transition: all 150ms ease-in-out;
+    padding-right: 0.25em;
   }
 
   .top-right div span {
@@ -105,23 +143,15 @@ const StreamCardWrapper = styled.div`
 
   .center {
     position: absolute;
-    top: calc(50% - 2em);
+    top: calc(50% - 3em);
     left: calc(50% - 2em);
     opacity: 0;
+    transition: all ease-in-out 150ms;
   }
 
-  .play-btn {
-    height: 4em;
-    width: 4em;
-    background: red;
-    border-radius: 50vh;
-  }
-
-  .play-btn div {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    clip-path: polygon(35% 25%, 35% 75%, 78% 50%);
+  .center:hover {
+    transform: scale(1.2);
+    transition: transform 150ms ease-in-out;
   }
 
   .bottom-left {
@@ -146,39 +176,6 @@ const StreamCardWrapper = styled.div`
     background-image: url(${streamer1});
     background-size: cover;
     border: 1px solid #fff;
-  }
-
-  :hover {
-    transform: scale(1.1);
-    -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
-  }
-
-  :hover .description {
-    background: ${(props) => props.theme.colors.hoverSecondary};
-  }
-
-  :hover .image {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    opacity: 1;
-    transition: border-radius 150ms ease-in-out, opacity 150ms ease-in-out;
-  }
-
-  :hover .top-right div {
-    transition: background 150ms ease-in-out, width 150ms ease-in-out;
-    width: 110px;
-    background: #9147ff;
-  }
-
-  :hover .top-right div span {
-    display: inline;
-  }
-
-  :hover .center {
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
   }
 
   .description {
@@ -218,9 +215,7 @@ const StreamCard = () => {
           </div>
         </div>
         <div className='center'>
-          <div className='play-btn'>
-            <div></div>
-          </div>
+          <PlayButton />
         </div>
         <div className='bottom-left'>
           <p className='streamer'>LCK_Korea</p>
