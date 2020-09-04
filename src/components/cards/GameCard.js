@@ -71,6 +71,8 @@ const GameCardWrapper = styled.div`
     -webkit-transition: 250ms;
     transition: 250ms;
     color: ${(props) => props.theme.colors.textPrimary};
+    position: relative;
+    z-index: 10;
   }
 
   .front .thumbnail {
@@ -130,6 +132,7 @@ const GameCardWrapper = styled.div`
     -webkit-transform: translateY(35%);
     transform: translateY(35%);
     color: ${(props) => props.theme.colors.textPrimary};
+    z-index: 1;
   }
 
   .back .streaming-info {
@@ -151,18 +154,20 @@ const GameCardWrapper = styled.div`
     color: ${(props) => props.theme.colors.textSecondary};
   }
 
-  .background {
-    background: green;
+  .card-background {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: 0;
     opacity: 0;
     -webkit-transform: scale(0.2, 0.9);
     transform: scale(0.2, 0.9);
     border-radius: 0.5em;
+    -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 
   .game:hover .rank {
@@ -210,7 +215,7 @@ const GameCardWrapper = styled.div`
     font-weight: bold;
   }
 
-  .game:hover .background {
+  .game:hover .card-background {
     -webkit-transition: transform 200ms cubic-bezier(0.2, 1, 0.8, 1),
       opacity 100ms linear;
     transition: transform 200ms cubic-bezier(0.2, 1, 0.8, 1),
@@ -324,7 +329,7 @@ const GameCard = ({ game }) => {
           </div>
         </div>
 
-        <div className='background'></div>
+        <div className='card-background'></div>
       </div>
     </GameCardWrapper>
   );
