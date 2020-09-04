@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import PlayButton from '../UI/PlayButton';
+
 import { ReactComponent as MicIcon } from '../../img/mic.svg';
 import { ReactComponent as FlameIcon } from '../../img/flame.svg';
 import user from '../../img/user.svg';
@@ -48,6 +50,7 @@ const TrendingStreamsCardWrapper = styled.div`
 
   .main-card:hover .center {
     opacity: 1;
+    transition: all 250ms ease-in-out;
   }
 
   .overlay {
@@ -241,22 +244,16 @@ const TrendingStreamsCardWrapper = styled.div`
     }
     .center {
       position: absolute;
-      top: calc(50% - 4em);
+      top: calc(50% - 3em);
       left: calc(50% - 2em);
       opacity: 0;
-      transition: 250ms ease-in-out;
+      transition: all ease-in-out 150ms;
+      z-index: 10;
     }
-    .play-btn {
-      height: 4em;
-      width: 4em;
-      background: red;
-      border-radius: 50vh;
-    }
-    .play-btn div {
-      width: 100%;
-      height: 100%;
-      background: #fff;
-      clip-path: polygon(35% 25%, 35% 75%, 78% 50%);
+
+    .center:hover {
+      transform: scale(1.2);
+      transition: transform 150ms ease-in-out;
     }
     .overlay {
       padding: 1em;
@@ -342,9 +339,7 @@ const TrendingStreamsCard = () => {
       <div className='main-card'>
         <div className='card-body'>
           <div className='center'>
-            <div className='play-btn'>
-              <div></div>
-            </div>
+            <PlayButton />
           </div>
           <div className='overlay'>
             <div className='stream-stats'>
