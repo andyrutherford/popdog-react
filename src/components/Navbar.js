@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { SearchIcon, ThemeIcon } from '../components/UI/Icons';
 import { ReactComponent as Logo } from '../img/logo.svg';
@@ -14,7 +14,17 @@ const NavbarWrapper = styled.div`
   height: 80px;
   max-width: 1260px;
   margin: auto;
-  border-bottom: 1px solid grey;
+  background-color: ${(props) => props.theme.colors.mainBackground};
+  z-index: 999;
+  transition: max-width 300ms ease, padding 300ms ease,
+    box-shadow 300ms ease-in-out;
+  ${(props) =>
+    props.sticky &&
+    css`
+      max-width: 100%;
+      padding: 0 3em;
+      box-shadow: rgba(91, 93, 94, 0.1) 0px 8px 24px;
+    `}
 
   a {
     padding-top: 8px;
@@ -140,9 +150,9 @@ const NavbarWrapper = styled.div`
   }
 `;
 
-const Navbar = ({ themeHandler, isDarkMode }) => {
+const Navbar = ({ themeHandler, isDarkMode, sticky }) => {
   return (
-    <NavbarWrapper>
+    <NavbarWrapper sticky={sticky}>
       <div className='nav-left'>
         <Logo />
         <nav>

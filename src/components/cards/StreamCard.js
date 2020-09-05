@@ -31,7 +31,7 @@ const StreamCardWrapper = styled.div`
   }
 
   :hover .top-right div {
-    transition: width 150ms ease-in-out, background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
     width: 110px;
     background-color: #9147ff;
   }
@@ -132,7 +132,7 @@ const StreamCardWrapper = styled.div`
     width: 1.5em;
     display: flex;
     justify-content: flex-end;
-    transition: width 150ms ease-in-out, background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
     padding-right: 0.25em;
   }
 

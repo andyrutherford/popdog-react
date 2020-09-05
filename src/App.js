@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import useSticky from './hooks/useSticky.js';
+
 import { default as GlobalStyle } from './styles/Global';
 import Theme from './styles/Theme';
 
@@ -13,6 +15,7 @@ import TrendingStreams from './components/TrendingStreams';
 import Footer from './components/Footer';
 
 const App = () => {
+  const { isSticky } = useSticky();
   const stored = localStorage.getItem('isDarkMode');
   const [isDarkMode, setIsDarkMode] = useState(
     stored === 'true' ? true : false
@@ -28,7 +31,11 @@ const App = () => {
         className='App'
         style={{ backgroundColor: isDarkMode ? '#0d1113' : '#fff' }}
       >
-        <Navbar themeHandler={themeHandler} isDarkMode={isDarkMode} />
+        <Navbar
+          themeHandler={themeHandler}
+          isDarkMode={isDarkMode}
+          sticky={isSticky}
+        />
         <Container>
           <Header />
           <Popular />
