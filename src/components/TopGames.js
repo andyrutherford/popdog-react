@@ -35,7 +35,7 @@ const TopGamesWrapper = styled.div`
   .content {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2.2em;
+    gap: 1.5em;
   }
 
   .separator {

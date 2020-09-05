@@ -11,7 +11,7 @@ const StreamCardWrapper = styled.div`
   width: 288px;
   height: 231px;
   border-radius: 10px;
-  transition: all 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
 
   :hover {
     transform: scale(1.1);
@@ -28,13 +28,12 @@ const StreamCardWrapper = styled.div`
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     opacity: 1;
-    transition: all 150ms ease-in-out;
   }
 
   :hover .top-right div {
-    transition: all 150ms ease-in-out;
+    transition: width 150ms ease-in-out, background-color 150ms ease-in-out;
     width: 110px;
-    background: #9147ff;
+    background-color: #9147ff;
   }
 
   :hover .top-right div span {
@@ -43,7 +42,7 @@ const StreamCardWrapper = styled.div`
 
   :hover .center {
     opacity: 1;
-    transition: all 250ms ease-in-out;
+    transition: opacity 150ms ease-in-out;
   }
 
   .image {
@@ -63,7 +62,8 @@ const StreamCardWrapper = styled.div`
         rgba(0, 0, 0, 0.9)
       ),
       url(https://source.unsplash.com/random/300x200/?videogame);
-    transition: all 150ms ease-in-out;
+    transition: border-bottom-right-radius 150ms ease-in-out,
+      border-radius 150ms ease-in-out;
   }
 
   .top-left {
@@ -104,8 +104,8 @@ const StreamCardWrapper = styled.div`
   }
 
   .viewers:before {
-    width: 16px;
-    height: 16px;
+    width: 1em;
+    height: 1em;
     display: inline-block;
     content: '';
     -webkit-mask: url(${user}) no-repeat 50% 50%;
@@ -132,7 +132,7 @@ const StreamCardWrapper = styled.div`
     width: 1.5em;
     display: flex;
     justify-content: flex-end;
-    transition: all 150ms ease-in-out;
+    transition: width 150ms ease-in-out, background-color 150ms ease-in-out;
     padding-right: 0.25em;
   }
 
@@ -146,7 +146,7 @@ const StreamCardWrapper = styled.div`
     top: calc(50% - 3em);
     left: calc(50% - 2em);
     opacity: 0;
-    transition: all ease-in-out 150ms;
+    transition: opacity ease-in-out 150ms;
   }
 
   .center:hover {

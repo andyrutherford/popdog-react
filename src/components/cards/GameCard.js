@@ -5,13 +5,12 @@ import gameCover from '../../img/game-cover.jpg';
 import streamer1 from '../../img/streamer-1.jpg';
 import streamer2 from '../../img/streamer-2.jpg';
 import streamer3 from '../../img/streamer-3.jpg';
+import user from '../../img/user.svg';
 
 const GameCardWrapper = styled.div`
-  h1,
-  h2,
-  h3,
-  p {
-    margin: 0;
+  position: relative;
+  :hover {
+    z-index: 100;
   }
 
   img {
@@ -57,6 +56,7 @@ const GameCardWrapper = styled.div`
     top: 0;
     right: 1em;
     z-index: 100;
+    color: #f5eee7;
     font-weight: bold;
     font-size: 1.125rem;
     background: rgba(0, 0, 0, 0.65);
@@ -95,6 +95,28 @@ const GameCardWrapper = styled.div`
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    color: ${(props) => props.theme.colors.textSecondary};
+    font-size: 0.85em;
+    font-weight: 300;
+  }
+
+  .front .stats .viewers {
+    display: flex;
+    align-items: center;
+  }
+
+  .front .stats .viewers:before {
+    width: 1.25em;
+    height: 1.25em;
+    display: inline-block;
+    content: '';
+    -webkit-mask: url(${user}) no-repeat 50% 50%;
+    mask: url(${user}) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background: ${(props) => props.theme.colors.textSecondary};
+    vertical-align: text-top;
+    margin-right: 0.25em;
   }
 
   .front .streamers img {
@@ -155,6 +177,7 @@ const GameCardWrapper = styled.div`
   }
 
   .card-background {
+    background: ${(props) => props.theme.colors.hoverSecondary};
     position: absolute;
     top: 0;
     bottom: 0;
@@ -172,7 +195,7 @@ const GameCardWrapper = styled.div`
 
   .game:hover .rank {
     -webkit-transform: translate(150%, -67%);
-    transform: translate(150%, -67%);
+    transform: translate(150%, -55.5%);
   }
 
   .game:hover .front {
