@@ -7,6 +7,7 @@ import SeeMoreButton from './UI/SeeMoreButton';
 import controller from '../img/game-controller.svg';
 
 const TopGamesWrapper = styled.div`
+  position: relative;
   h1 {
     color: ${(props) => props.theme.colors.textPrimary};
     font: 600 2rem / 48px Poppins, Helvetica, Arial, sans-serif;
@@ -36,12 +37,16 @@ const TopGamesWrapper = styled.div`
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1.5em;
+    position: relative;
+    z-index: 0;
   }
 
   .separator {
-    margin-top: 10rem;
+    padding-top: 5rem;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 100;
   }
 
   .separator-btn {
@@ -89,8 +94,6 @@ const TopGamesWrapper = styled.div`
       align-items: center;
     }
 
-    .separator div {
-    }
     .separator-line {
       display: block;
       flex: 1 1 0%;

@@ -64,12 +64,12 @@ const GameCardWrapper = styled.div`
     -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0 100%, 0 0);
     clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0 100%, 0 0);
     -webkit-transition: ${(props) => props.theme.colors.clrsecondary};
-    transition: transform 200ms cubic-bezier(0.2, 1, 0.8, 1);
+    transition: transform 150ms cubic-bezier(0.2, 1, 0.8, 1);
   }
 
   .front {
-    -webkit-transition: 250ms;
-    transition: 250ms;
+    -webkit-transition: 150ms;
+    transition: 150ms;
     color: ${(props) => props.theme.colors.textPrimary};
     position: relative;
     z-index: 10;
@@ -204,8 +204,8 @@ const GameCardWrapper = styled.div`
   }
 
   .game:hover .front .name {
-    -webkit-animation: gameName 250ms forwards;
-    animation: gameName 250ms forwards;
+    -webkit-animation: gameName 150ms forwards;
+    animation: gameName 150ms forwards;
   }
 
   .game:hover .front .stats {
@@ -239,10 +239,10 @@ const GameCardWrapper = styled.div`
   }
 
   .game:hover .card-background {
-    -webkit-transition: transform 200ms cubic-bezier(0.2, 1, 0.8, 1),
-      opacity 100ms linear;
-    transition: transform 200ms cubic-bezier(0.2, 1, 0.8, 1),
-      opacity 100ms linear;
+    -webkit-transition: transform 150ms cubic-bezier(0.2, 1, 0.8, 1),
+      opacity 150ms linear;
+    transition: transform 150ms cubic-bezier(0.2, 1, 0.8, 1),
+      opacity 150ms linear;
     opacity: 1;
     -webkit-transform: scale(1.35, 1.3) translateY(5%);
     transform: scale(1.35, 1.3) translateY(5%);
@@ -273,11 +273,11 @@ const GameCardWrapper = styled.div`
 
   @keyframes gameName {
     0% {
-      text-align: left;
+      text-align: center;
       opacity: 1;
     }
     20% {
-      text-align: left;
+      text-align: center;
       opacity: 0;
     }
     50% {
