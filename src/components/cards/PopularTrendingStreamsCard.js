@@ -43,7 +43,7 @@ const PopularTrendingStreamsCardWrapper = styled.div`
     top: calc(50% - 3em);
     left: calc(50% - 2em);
     opacity: 0;
-    transition: all ease-in-out 150ms;
+    transition: opacity ease-in-out 150ms, transform ease-in-out 150ms;
   }
 
   .center:hover {
@@ -56,7 +56,7 @@ const PopularTrendingStreamsCardWrapper = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    transition: 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
   }
 
   .overlay-header {
@@ -93,7 +93,7 @@ const PopularTrendingStreamsCardWrapper = styled.div`
     padding-left: 1em;
     height: 2.5em;
     border-top: 0.5px solid lightgrey;
-    transition: 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out;
   }
 
   .overlay-footer .icon {

@@ -29,8 +29,6 @@ const PlayButtonWrapper = styled.div`
   .play-btn .icon::before {
     width: 100%;
     height: 100%;
-    /* background: #fff; */
-    /* clip-path: polygon(35% 25%, 35% 75%, 78% 50%); */
     background-image: url(${play});
     background-size: 50% 50%;
     background-repeat: no-repeat;

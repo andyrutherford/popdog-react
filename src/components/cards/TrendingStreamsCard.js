@@ -32,14 +32,13 @@ const TrendingStreamsCardWrapper = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 16px;
-
     color: #fff;
     position: relative;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url(https://source.unsplash.com/random/762x406/?videogame);
-    transition: 150ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out;
   }
 
   .main-card:hover {
@@ -105,8 +104,8 @@ const TrendingStreamsCardWrapper = styled.div`
     padding-right: 0.25em;
   }
   .viewers:before {
-    width: 16px;
-    height: 16px;
+    width: 1em;
+    height: 1em;
     display: inline-block;
     content: '';
     -webkit-mask: url(${user}) no-repeat 50% 50%;
@@ -247,7 +246,7 @@ const TrendingStreamsCardWrapper = styled.div`
       top: calc(50% - 3em);
       left: calc(50% - 2em);
       opacity: 0;
-      transition: all ease-in-out 150ms;
+      transition: opacity ease-in-out 150ms;
       z-index: 10;
     }
 
@@ -262,7 +261,7 @@ const TrendingStreamsCardWrapper = styled.div`
     .stream-stats > div {
       height: 2em;
       padding: 0 0.25em;
-      margin: 0 0.5em;
+      margin: 0 0.5em 0 0;
       font-size: 0.75rem;
     }
 
