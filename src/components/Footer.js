@@ -9,8 +9,8 @@ import { ReactComponent as InstagramIcon } from '../img/instagram.svg';
 const FooterWrapper = styled.div`
   background: rgba(0, 0, 0, 0) ${(props) => props.theme.colors.footerBackground}
     repeat scroll 0% 0%;
-  padding-top: 8rem;
-  padding-bottom: 5rem;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
   font-size: 0.875rem;
   font-weight: 300;
 
@@ -84,6 +84,8 @@ const FooterWrapper = styled.div`
   }
 
   @media (min-width: 972px) {
+    padding-top: 5em;
+    padding-bottom: 5em;
     .footer-content {
       flex-direction: row;
       justify-content: space-between;

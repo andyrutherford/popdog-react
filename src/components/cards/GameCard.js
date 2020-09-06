@@ -6,6 +6,7 @@ import streamer1 from '../../img/streamer-1.jpg';
 import streamer2 from '../../img/streamer-2.jpg';
 import streamer3 from '../../img/streamer-3.jpg';
 import user from '../../img/user.svg';
+import play from '../../img/play.svg';
 
 const GameCardWrapper = styled.div`
   position: relative;
@@ -49,6 +50,72 @@ const GameCardWrapper = styled.div`
     width: 2em;
     height: 2em;
     border-radius: 50%;
+  }
+
+  .streamer .icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    transition: transform ease-in-out 100ms;
+  }
+
+  .streamer:hover .icon {
+    transform: translateY(-10%);
+  }
+
+  .streamer:hover .icon::before {
+    opacity: 1;
+  }
+
+  .streamer .icon:hover {
+    transform: translateY(-10%) scale(1.1);
+  }
+
+  .icon::before,
+  .icon::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50vh;
+  }
+
+  .icon::before {
+    background: #f00;
+    background-image: url(${play});
+    background-size: 0.1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    font-size: 5em;
+    z-index: 10;
+    transition: opacity 50ms linear, background-color 100ms linear;
+  }
+
+  .icon:hover::before {
+    background-color: #cc0202;
+  }
+
+  .icon:hover::after {
+    background: #f00;
+    z-index: 1;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.75;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0%;
+    }
   }
 
   .rank {

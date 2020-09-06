@@ -42,7 +42,6 @@ const TopGamesWrapper = styled.div`
   }
 
   .separator {
-    padding-top: 5rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -92,6 +91,11 @@ const TopGamesWrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .separator {
+      padding-top: 2.5rem;
+      margin-top: 2rem;
     }
 
     .separator-line {
