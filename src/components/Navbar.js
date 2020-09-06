@@ -110,7 +110,7 @@ const NavbarWrapper = styled.div`
   }
 
   #theme-btn svg {
-    stroke: ${(props) => props.theme.colors.textThird};
+    fill: ${(props) => props.theme.colors.textThird};
   }
 
   #theme-btn:hover {
@@ -119,7 +119,7 @@ const NavbarWrapper = styled.div`
   }
 
   #theme-btn:hover svg {
-    stroke: ${(props) => props.theme.colors.mainBackground};
+    fill: ${(props) => props.theme.colors.mainBackground};
   }
 
   #login-btn {
