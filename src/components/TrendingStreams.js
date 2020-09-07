@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import Container from '../components/UI/Container';
 import Carousel from './Carousel';
-import TrendingStreamsCard from '../components/cards/TrendingStreamsCard';
 
 const TrendingStreamsWrapper = styled.div`
   padding: 4rem 0 2rem;

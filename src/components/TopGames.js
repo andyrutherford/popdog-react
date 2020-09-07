@@ -34,9 +34,10 @@ const TopGamesWrapper = styled.div`
     margin-bottom: 1.5em;
   }
   .content {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 175px);
+    gap: 2em;
+    justify-content: center;
     position: relative;
     z-index: 0;
   }
@@ -44,6 +45,8 @@ const TopGamesWrapper = styled.div`
   .separator {
     display: flex;
     align-items: center;
+    margin-top: 2em;
+    padding-top: 2em;
     position: relative;
     z-index: 100;
   }
@@ -142,12 +145,12 @@ const games = [
     watching: 1431,
     streams: 6502,
   },
-  // {
-  //   rank: 6,
-  //   title: 'VALORANT',
-  //   watching: 265,
-  //   streams: 285,
-  // },
+  {
+    rank: 6,
+    title: 'VALORANT',
+    watching: 265,
+    streams: 285,
+  },
 ];
 
 const TopGames = () => {

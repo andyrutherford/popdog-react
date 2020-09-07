@@ -35,7 +35,7 @@ const GameCardWrapper = styled.div`
 
   .game {
     position: relative;
-    width: 12.5em;
+    width: 11.5em;
     cursor: pointer;
   }
 
@@ -122,7 +122,7 @@ const GameCardWrapper = styled.div`
     position: absolute;
     top: 0;
     right: 1em;
-    z-index: 100;
+    z-index: 99;
     color: #f5eee7;
     font-weight: bold;
     font-size: 1.125rem;
@@ -400,21 +400,21 @@ const GameCard = ({ game }) => {
               <div className='icon'>
                 <img src={streamer1} alt='' />
               </div>
-              <p className='name'>Gamer 1</p>
+              <p className='name'>Gamer</p>
               <p className='number'>36.1k</p>
             </div>
             <div className='streamer'>
               <div className='icon'>
                 <img src={streamer2} alt='' />
               </div>
-              <p className='name'>Gamer 2</p>
+              <p className='name'>Gamer</p>
               <p className='number'>32.2k</p>
             </div>
             <div className='streamer'>
               <div className='icon'>
                 <img src={streamer3} alt='' />
               </div>
-              <p className='name'>Gamer 3</p>
+              <p className='name'>Gamer</p>
               <p className='number'>17.3k</p>
             </div>
           </div>
