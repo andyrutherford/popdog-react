@@ -36,6 +36,9 @@ const Global = createGlobalStyle`
 	button {
 		cursor: pointer;
 	}
+	span {
+		font-family: 'Poppins', sans-serif;
+	}
 	ul {
 		list-style-type: none;
 	}

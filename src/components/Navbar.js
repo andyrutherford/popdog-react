@@ -107,6 +107,27 @@ const NavbarWrapper = styled.div`
     display: flex;
     align-items: center;
     margin: 0 15px;
+    position: relative;
+  }
+
+  #theme-btn .tooltiptext {
+    display: none;
+    font-size: 1.4em;
+    font-weight: 300;
+    width: 150px;
+    background-color: ${(props) => props.theme.colors.textPrimary};
+    color: ${(props) => props.theme.colors.mainBackground};
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: -140%;
+    z-index: 1;
+  }
+
+  #theme-btn:hover .tooltiptext {
+    display: block;
   }
 
   #theme-btn svg {
@@ -179,6 +200,9 @@ const Navbar = ({ themeHandler, isDarkMode, sticky }) => {
         <div>
           <button id='theme-btn' onClick={() => themeHandler()}>
             <ThemeIcon size={18} backgroundColor='#f6f7f7' />
+            <span className='tooltiptext'>
+              Enable {isDarkMode ? 'Light' : 'Dark'} Mode
+            </span>
           </button>
         </div>{' '}
         <div>
