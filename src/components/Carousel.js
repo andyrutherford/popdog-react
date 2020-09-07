@@ -9,10 +9,19 @@ import { ReactComponent as LeftChevron } from '../img/left-chevron.svg';
 import { ReactComponent as RightChevron } from '../img/right-chevron.svg';
 
 const CarouselWrapper = styled.div`
+  width: 335px;
+  height: 184px;
   margin: auto;
 
-  .carousel .slider-wrapper {
+  .carousel {
     border-radius: 1em;
+    transition: box-shadow 150ms ease-in-out;
+  }
+
+  .carousel:hover {
+    -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 
   .carousel .slide {
@@ -223,16 +232,10 @@ const CardCarousel = () => {
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide + 1);
-    // this.setState((state) => ({
-    //   currentSlide: state.currentSlide + 1,
-    // }));
   };
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide - 1);
-    // this.setState((state) => ({
-    //   currentSlide: state.currentSlide - 1,
-    // }));
   };
 
   const updateCurrentSlide = (index) => {
@@ -256,15 +259,12 @@ const CardCarousel = () => {
       >
         <div>
           <TrendingStreamsCard />
-          <p className='legend'>Legend 1</p>
         </div>
         <div>
           <TrendingStreamsCard />
-          <p className='legend'>Legend 2</p>
         </div>
         <div>
           <TrendingStreamsCard />
-          <p className='legend'>Legend 3</p>
         </div>
       </Carousel>
       <CardFooterWrapper>
@@ -292,12 +292,3 @@ const CardCarousel = () => {
 };
 
 export default CardCarousel;
-
-// <div style={containerStyle}>
-//           <button onClick={this.prev} style={buttonStyle}>
-//             <LeftChevron />
-//           </button>
-//           <button onClick={this.next} style={buttonStyle}>
-//             <RightChevron />
-//           </button>
-//         </div>

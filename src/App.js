@@ -31,7 +31,7 @@ const App = () => {
         className='App'
         style={{ backgroundColor: isDarkMode ? '#0d1113' : '#fff' }}
       >
-        {/* <Navbar
+        <Navbar
           themeHandler={themeHandler}
           isDarkMode={isDarkMode}
           sticky={isSticky}
@@ -41,7 +41,7 @@ const App = () => {
           <Popular />
           <TopGames />
           <PopularStreams />
-        </Container> */}
+        </Container>
         <TrendingStreams />
         <Footer />
       </div>

@@ -35,18 +35,29 @@ const TrendingStreamsCardWrapper = styled.div`
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url(https://source.unsplash.com/random/762x406/?videogame);
-    transition: box-shadow 150ms ease-in-out;
-  }
-
-  .main-card:hover {
-    -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 
   .main-card:hover .center {
     opacity: 1;
     transition: all 250ms ease-in-out;
+  }
+
+  .card-body {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 200ms ease-out 0s;
+    background: rgba(0, 0, 0, 0)
+      linear-gradient(270deg, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.75) 100%)
+      repeat scroll 0% 0%;
+    opacity: 1;
   }
 
   .overlay {
@@ -179,26 +190,10 @@ const TrendingStreamsCardWrapper = styled.div`
       width: 100%;
       height: 100%;
     }
-    .card-body {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      top: 0px;
-      left: 0px;
-      height: 100%;
-      width: 100%;
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: opacity 200ms ease-out 0s;
-      background: rgba(0, 0, 0, 0)
-        linear-gradient(270deg, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.75) 100%)
-        repeat scroll 0% 0%;
-      opacity: 1;
-    }
+
     .center {
       position: absolute;
-      top: calc(50% - 3em);
+      top: calc(50% - 4em);
       left: calc(50% - 2em);
       opacity: 0;
       transition: opacity ease-in-out 150ms;
