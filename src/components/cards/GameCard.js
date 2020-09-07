@@ -227,8 +227,9 @@ const GameCardWrapper = styled.div`
   .back .streaming-info {
     -webkit-columns: 2;
     columns: 2;
-    -webkit-column-rule: 1px solid rgba(255, 255, 255, 0.25);
-    column-rule: 1px solid rgba(255, 255, 255, 0.25);
+    -webkit-column-rule: 0.5px solid
+      ${(props) => props.theme.colors.textSecondary};
+    column-rule: 0.5px solid ${(props) => props.theme.colors.textSecondary};
   }
 
   .back .game-stat {

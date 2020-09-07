@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from '../components/UI/Container';
+import Carousel from './Carousel';
 import TrendingStreamsCard from '../components/cards/TrendingStreamsCard';
 
 const TrendingStreamsWrapper = styled.div`
@@ -41,7 +42,8 @@ const TrendingStreams = () => {
           <h1>Trending Streams</h1>
           <span>Find new favorites from these overachievers</span>
         </div>
-        <TrendingStreamsCard />
+        {/* <TrendingStreamsCard /> */}
+        <Carousel />
       </Container>
     </TrendingStreamsWrapper>
   );

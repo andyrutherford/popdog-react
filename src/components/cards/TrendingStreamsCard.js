@@ -6,9 +6,6 @@ import PlayButton from '../UI/PlayButton';
 import { ReactComponent as MicIcon } from '../../img/mic.svg';
 import { ReactComponent as FlameIcon } from '../../img/flame.svg';
 import user from '../../img/user.svg';
-import streamer from '../../img/streamer-3.jpg';
-import { ReactComponent as LeftChevron } from '../../img/left-chevron.svg';
-import { ReactComponent as RightChevron } from '../../img/right-chevron.svg';
 
 const TrendingStreamsCardWrapper = styled.div`
   width: 335px;
@@ -174,48 +171,6 @@ const TrendingStreamsCardWrapper = styled.div`
     border-radius: 50vh;
   }
 
-  .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1em;
-  }
-
-  .card-footer .user {
-    display: flex;
-    align-items: center;
-  }
-
-  .card-footer .avatar {
-    height: 2.5em;
-    width: 2.5em;
-    border-radius: 50vh;
-    background: grey;
-    margin-right: 0.75em;
-  }
-
-  .card-footer .avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-  }
-
-  .card-footer .user .username {
-    font-weight: 700;
-    font-size: 1em;
-  }
-
-  .username a {
-    color: ${(props) => props.theme.colors.textPrimary};
-  }
-
-  .username a:hover {
-    color: ${(props) => props.theme.colors.hoverPrimary};
-  }
-
-  .card-footer .nav {
-    display: none;
-  }
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     width: 562px;
     height: 294px;
@@ -277,28 +232,6 @@ const TrendingStreamsCardWrapper = styled.div`
     .bar div > div {
       height: 4px;
     }
-
-    .card-footer .nav {
-      display: flex;
-    }
-
-    .card-footer .avatar {
-      height: 3em;
-      width: 3em;
-      border-radius: 50vh;
-      background: grey;
-      margin-right: 1em;
-    }
-
-    .card-footer .nav svg {
-      width: 100%;
-      height: 100%;
-      stroke: ${(props) => props.theme.colors.textThird};
-    }
-
-    .card-footer .nav button:first-child {
-      margin-right: 1em;
-    }
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -322,7 +255,7 @@ const TrendingStreamsCardWrapper = styled.div`
 
     .overlay {
       width: 60%;
-      padding: 1.5em;
+      padding: 0 0 1.5em 1.5em;
     }
 
     .title {
@@ -370,24 +303,6 @@ const TrendingStreamsCard = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className='card-footer'>
-        <div className='user'>
-          <div className='avatar'>
-            <img src={streamer} alt='streamer' />
-          </div>
-          <span className='username'>
-            <a href='#!'>Autophil</a>
-          </span>
-        </div>
-        <div className='nav'>
-          <button className='left'>
-            <LeftChevron className='arrow' />
-          </button>
-          <button className='right'>
-            <RightChevron className='arrow' />
-          </button>
         </div>
       </div>
     </TrendingStreamsCardWrapper>
