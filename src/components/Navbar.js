@@ -12,6 +12,7 @@ const NavbarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  padding: 0 1em;
   max-width: 1260px;
   margin: auto;
   background-color: ${(props) => props.theme.colors.mainBackground};
@@ -22,14 +23,13 @@ const NavbarWrapper = styled.div`
     props.sticky &&
     css`
       max-width: 100%;
-      padding: 0 3em;
+      padding: 0 1em;
       box-shadow: rgba(91, 93, 94, 0.1) 0px 8px 24px;
     `}
 
   a {
     padding-top: 8px;
     padding-bottom: 4px;
-    margin-right: 0.5em;
     color: #000;
     text-decoration: none;
     font-weight: 600;
@@ -48,12 +48,22 @@ const NavbarWrapper = styled.div`
     display: flex;
   }
 
+  .logo {
+    width: 90px;
+    transition: width 150ms ease;
+  }
+
   .nav-left {
     display: flex;
   }
 
+  .nav-left nav {
+    display: none;
+    transition: 150ms ease;
+  }
+
   .nav-left-links {
-    margin-left: 40px;
+    margin-left: 1em;
   }
 
   .nav-left-links li a {
@@ -84,7 +94,7 @@ const NavbarWrapper = styled.div`
     padding: 10px;
     display: flex;
     align-items: center;
-    margin: 0 15px;
+    margin: 0;
     border-radius: 50vh;
   }
 
@@ -106,7 +116,7 @@ const NavbarWrapper = styled.div`
     color: ${(props) => props.theme.colors.textPrimary};
     display: flex;
     align-items: center;
-    margin: 0 15px;
+    margin: 0 1em;
     position: relative;
   }
 
@@ -124,6 +134,9 @@ const NavbarWrapper = styled.div`
     top: 100%;
     left: -140%;
     z-index: 1;
+    -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 
   #theme-btn:hover .tooltiptext {
@@ -147,7 +160,7 @@ const NavbarWrapper = styled.div`
     color: ${(props) => props.theme.colors.btnPrimary};
     display: inline-block;
     border-radius: 50vh;
-    padding: 11px 24px;
+    padding: 11px 8px;
     line-height: 1rem;
   }
 
@@ -161,13 +174,42 @@ const NavbarWrapper = styled.div`
       0% 0%;
     color: #fff;
     border-radius: 50vh;
-    padding: 11px 24px;
-    margin: 0;
+    padding: 11px 8px;
+    margin: 0 0 0 1em;
   }
 
   #join-btn:hover {
     box-shadow: rgba(32, 98, 225, 0.25) 0px 4px 4px;
     background: rgb(32, 98, 225) none repeat scroll 0% 0%;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    ${(props) =>
+      props.sticky &&
+      css`
+        padding: 0 3em;
+      `}
+
+    .nav-left nav {
+      display: block;
+    }
+    .nav-left-links {
+      margin-left: 3em;
+    }
+
+    #search-btn {
+      margin: 0 1em;
+    }
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    .logo {
+      width: 100%;
+    }
+    #join-btn,
+    #login-btn {
+      padding: 11px 24px;
+    }
   }
 `;
 
@@ -175,7 +217,7 @@ const Navbar = ({ themeHandler, isDarkMode, sticky }) => {
   return (
     <NavbarWrapper sticky={sticky}>
       <div className='nav-left'>
-        <Logo />
+        <Logo className='logo' />
         <nav>
           <ul className='nav-left-links'>
             <li>
