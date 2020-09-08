@@ -34,7 +34,7 @@ const PopularWrapper = styled.div`
   }
 
   a {
-    padding-right: 1rem;
+    padding-right: 1em;
   }
 
   a:hover {
@@ -79,7 +79,7 @@ const PopularWrapper = styled.div`
   .card-header {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
   }
 
   .card-header a {
@@ -99,13 +99,12 @@ const PopularWrapper = styled.div`
   }
 
   .separator {
-    padding-top: 2rem;
     display: flex;
     align-items: center;
   }
 
   .separator div {
-    padding-left: 1rem;
+    padding-left: 1eem;
     flex: 1 1 0%;
   }
 
@@ -114,7 +113,7 @@ const PopularWrapper = styled.div`
     border: 0.5px solid rgb(227, 232, 235);
   }
 
-  @media (min-width: 972px) {
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     h2 {
       font-size: 2rem;
     }
@@ -129,6 +128,10 @@ const PopularWrapper = styled.div`
       height: 278px;
       max-height: 278px;
       overflow: hidden;
+    }
+
+    .separator {
+      padding-top: 2em;
     }
   }
 `;

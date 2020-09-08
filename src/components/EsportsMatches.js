@@ -1,21 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import StreamCard from './cards/StreamCard';
+import EsportsMatchesCard from './cards/EsportsMatchesCard';
 import SeeMoreButton from './UI/SeeMoreButton';
-
 import rightarrow from '../img/right-arrow.svg';
 
-const PopularStreamsWrapper = styled.div`
+const EsportsMatchesWrapper = styled.div`
   padding: 4rem 0 2rem;
   h1 {
     color: ${(props) => props.theme.colors.textPrimary};
     font: 600 2rem / 48px Poppins, Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
-    margin-bottom: 1rem;
   }
   .header {
     margin-bottom: 1em;
+    text-align: center;
   }
 
   .header span {
@@ -76,7 +75,6 @@ const PopularStreamsWrapper = styled.div`
       justify-content: space-between;
       align-items: center;
     }
-
     .separator-line {
       display: block;
       flex: 1 1 0%;
@@ -88,22 +86,23 @@ const PopularStreamsWrapper = styled.div`
       margin-right: 1rem;
     }
   }
+  }
 `;
 
-const PopularStreams = () => {
+const EsportsMatches = () => {
   return (
-    <PopularStreamsWrapper>
+    <EsportsMatchesWrapper>
       <div className='header'>
-        <h1>Popular Streams</h1>
-        <span>The most viewers right now on Twitch</span>
+        <h1>Esports matches</h1>
+        <span>
+          <input type='checkbox' id='toggle-scores' name='scores' value='' />
+          <label htmlFor='toggle-scores'>Hide Scores</label>
+        </span>
       </div>
       <div className='content'>
-        <StreamCard />
-        <StreamCard />
-        <StreamCard />
-        <StreamCard />
-        <StreamCard />
-        <StreamCard />
+        <EsportsMatchesCard />
+        <EsportsMatchesCard />
+        <EsportsMatchesCard />
       </div>
       <div className='separator'>
         <div className='separator-line'>
@@ -116,8 +115,8 @@ const PopularStreams = () => {
           <hr />
         </div>
       </div>
-    </PopularStreamsWrapper>
+    </EsportsMatchesWrapper>
   );
 };
 
-export default PopularStreams;
+export default EsportsMatches;

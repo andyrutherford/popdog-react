@@ -262,8 +262,8 @@ const GameCardWrapper = styled.div`
   }
 
   .game:hover .rank {
-    -webkit-transform: translate(150%, -67%);
-    transform: translate(150%, -55.5%);
+    -webkit-transform: translate(135%, -51%);
+    transform: translate(135%, -51%);
   }
 
   .game:hover .front {

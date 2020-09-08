@@ -6,10 +6,12 @@ import PlayButton from '../UI/PlayButton';
 import user from '../../img/user.svg';
 import { ReactComponent as TwitchIcon } from '../../img/twitch-small.svg';
 import streamer1 from '../../img/streamer-1.jpg';
+import avatar from '../../img/avatar-3.png';
+import streamer2 from '../../img/streamer-2.jpg';
+import swords from '../../img/swords.svg';
 
-const StreamCardWrapper = styled.div`
+const EsportsMatchesCardWrapper = styled.div`
   width: 288px;
-  height: 231px;
   border-radius: 10px;
   transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
 
@@ -45,6 +47,23 @@ const StreamCardWrapper = styled.div`
     transition: opacity 150ms ease-in-out;
   }
 
+  :hover .overlay-footer .top {
+    background: ${(props) => props.theme.colors.hoverThird};
+    color: ${(props) => props.theme.colors.textPrimary};
+  }
+
+  :hover .overlay-footer .top .left .team {
+    transform: translateX(15%) scale(1.2);
+  }
+
+  :hover .overlay-footer .top .right .team {
+    transform: translateX(-15%) scale(1.2);
+  }
+
+  :hover .overlay-footer .bottom {
+    transform: translateX(5%);
+  }
+
   .image {
     position: relative;
     background: transparent;
@@ -54,7 +73,8 @@ const StreamCardWrapper = styled.div`
     height: 169px;
     background: limegreen;
     border-radius: 10px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     color: #fff;
     background: linear-gradient(
         to bottom,
@@ -62,8 +82,6 @@ const StreamCardWrapper = styled.div`
         rgba(0, 0, 0, 0.9)
       ),
       url(https://source.unsplash.com/random/300x200/?videogame);
-    transition: border-bottom-right-radius 150ms ease-in-out,
-      border-radius 150ms ease-in-out;
   }
 
   .top-left {
@@ -154,6 +172,7 @@ const StreamCardWrapper = styled.div`
   }
 
   .bottom-left {
+    font-size: 1rem;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -172,33 +191,108 @@ const StreamCardWrapper = styled.div`
     width: 3em;
     border-radius: 50vh;
     background: grey;
-    background-image: url(${streamer1});
+    background-image: url(${avatar});
     background-size: cover;
     border: 1px solid #fff;
   }
 
-  .description {
-    font-size: 0.75rem;
-    font-weight: 600;
-    background: ${(props) => props.theme.colors.cardBackground};
-    padding: 1em 0.5em 0.5em 0.5em;
-    border-radius: 10px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+  .overlay-footer {
+    transition: opacity 150ms ease-in-out;
+    color: #fff;
+    height: 112px;
+    border-radius: inherit;
   }
 
-  .description .title {
-    font-weight: bold;
-    color: ${(props) => props.theme.colors.btnPrimary};
+  .overlay-footer .top {
+    background: ${(props) => props.theme.colors.cardBackgroundSecondary};
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0 0.5em;
+    height: 50%;
+    transition: background 250ms ease-in-out;
   }
-  .description p {
+
+  .overlay-footer .top .left,
+  .overlay-footer .top .right {
+    display: flex;
+    align-items: center;
+  }
+
+  .overlay-footer .top .left .team,
+  .overlay-footer .top .right .team {
+    height: 2em;
+    width: 2em;
+    border-radius: 50vh;
+    transition: transform 150ms ease-in-out;
+  }
+
+  .overlay-footer .top .left p,
+  .overlay-footer .top .right p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin: 0 1em;
+  }
+
+  .overlay-footer .top .left .team {
+    background-image: url(${streamer1});
+    background-size: 100% 100%;
+  }
+
+  .overlay-footer .top .right .team {
+    background-image: url(${streamer2});
+    background-size: 100% 100%;
+  }
+
+  .overlay-footer .top .middle {
+    display: flex;
+    align-items: center;
+  }
+
+  .overlay-footer .top .middle p {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .overlay-footer .top .middle div {
+    background-color: #999;
+    -webkit-mask-image: url(${swords});
+    mask-image: url(${swords});
+    background-size: 100% 100%;
+    height: 1em;
+    width: 1em;
+    margin: 0 1em;
+  }
+
+  .overlay-footer .bottom {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    height: 50%;
+    width: 50%;
+    border-radius: inherit;
+    transition: transform 150ms ease-in-out;
+  }
+
+  .overlay-footer .bottom .game-name {
+    color: ${(props) => props.theme.colors.btnPrimary};
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .overlay-footer .bottom .game-type {
     color: ${(props) => props.theme.colors.textPrimary};
+    font-size: 1rem;
+    font-weight: 600;
   }
 `;
 
-const StreamCard = () => {
+const EsportsMatchesCard = () => {
   return (
-    <StreamCardWrapper>
+    <EsportsMatchesCardWrapper>
       <div className='image'>
         <div className='top-left'>
           <div className='live'>
@@ -217,21 +311,35 @@ const StreamCard = () => {
           <PlayButton />
         </div>
         <div className='bottom-left'>
-          <p className='streamer'>LCK_Korea</p>
+          <p className='streamer'>BTS Pro Series Americas 3</p>
         </div>
         <div className='bottom-right'>
           <div></div>
         </div>
       </div>
-      <div className='description'>
-        <span className='title'>SpyParty</span>
-        <p>
-          @XQC ON TWITTER HEY MAN NICE TITLE BRO! IM OUT OF IDEAS! ARE YOU?
-          YES...
-        </p>
+      <div className='overlay-footer'>
+        <div className='top'>
+          <div className='left'>
+            <div className='team'></div>
+            <p className='team-name'>FNC</p>
+          </div>
+          <div className='middle'>
+            <p>1</p>
+            <div></div>
+            <p>1</p>
+          </div>
+          <div className='right'>
+            <p className='team-name'>BOOM</p>
+            <div className='team'></div>
+          </div>
+        </div>
+        <div className='bottom'>
+          <p className='game-name'>Dota 2</p>
+          <p className='game-type'>Round Robin</p>
+        </div>
       </div>
-    </StreamCardWrapper>
+    </EsportsMatchesCardWrapper>
   );
 };
 
-export default StreamCard;
+export default EsportsMatchesCard;

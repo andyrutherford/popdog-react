@@ -254,6 +254,7 @@ const CardCarousel = () => {
         showStatus={false}
         showArrows={false}
         showIndicators={false}
+        showThumbs={false}
         selectedItem={currentSlide}
         onChange={updateCurrentSlide}
       >

@@ -22,6 +22,7 @@ export default {
 
     mainBackground: '#0d1113',
     cardBackground: '#0d1113',
+    cardBackgroundSecondary: '#0d1113',
     footerBackground:
       'linear-gradient(360deg, rgba(45, 41, 51, 0.75) 0%, rgba(45, 41, 51, 0) 100%)',
 
@@ -30,6 +31,7 @@ export default {
 
     hoverPrimary: '#3a86f9',
     hoverSecondary: '#343739',
+    hoverThird: '#343739',
     socialLinkHover: '#fff',
     footerLink: '#919597',
   },

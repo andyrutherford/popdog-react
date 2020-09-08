@@ -46,7 +46,7 @@ const TopGamesWrapper = styled.div`
     display: flex;
     align-items: center;
     margin-top: 2em;
-    padding-top: 2em;
+    padding-top: 2.5em;
     position: relative;
     z-index: 100;
   }
@@ -157,7 +157,7 @@ const TopGames = () => {
   return (
     <TopGamesWrapper>
       <div className='header'>
-        <h1>Top Games</h1>
+        <h1>Top games</h1>
         <select>
           <option value='A'>Most Viewers</option>
           <option value='B'>Most Streams</option>
