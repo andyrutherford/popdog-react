@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import EsportsMatchesCard from './cards/EsportsMatchesCard';
@@ -14,13 +14,16 @@ const EsportsMatchesWrapper = styled.div`
   }
   .header {
     margin-bottom: 1em;
-    text-align: center;
+    text-align: left;
   }
 
   .header span {
     color: ${(props) => props.theme.colors.textSecondary};
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 0.875rem;
   }
 
   .content {
@@ -77,6 +80,10 @@ const EsportsMatchesWrapper = styled.div`
       justify-content: space-between;
       align-items: center;
     }
+
+    .header-span {
+      flex-direction: row;
+    }
     .separator-line {
       display: block;
       flex: 1 1 0%;
@@ -95,8 +102,9 @@ const ToggleScoresWrapper = styled.label`
   display: inline-block;
   width: 75px;
   height: 34px;
-  margin-left: 1em;
+  margin: 0 1em 0 0;
   transform: scale(0.8);
+  order: -1;
 
   :hover .slider {
     background-color: #5b5d5e;
@@ -154,9 +162,18 @@ const ToggleScoresWrapper = styled.label`
   .slider.round:before {
     border-radius: 50%;
   }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin: 0 0 0 1em;
+    order: 1;
+  }
 `;
 
 const EsportsMatches = () => {
+  const [showScores, setShowScores] = useState(false);
+
+  const onChange = () => setShowScores(!showScores);
+
   return (
     <EsportsMatchesWrapper>
       <div className='header'>
@@ -164,14 +181,14 @@ const EsportsMatches = () => {
         <span>
           <label>Hide Scores</label>
           <ToggleScoresWrapper className='switch'>
-            <input type='checkbox' />
+            <input type='checkbox' checked={showScores} onChange={onChange} />
             <span class='slider round'></span>
           </ToggleScoresWrapper>
         </span>
       </div>
       <div className='content'>
-        <EsportsMatchesCard />
-        <EsportsMatchesCard />
+        <EsportsMatchesCard showScores={!showScores} />
+        <EsportsMatchesCard showScores={!showScores} />
       </div>
       <div className='separator'>
         <div className='separator-line'>
