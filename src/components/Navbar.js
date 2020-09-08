@@ -5,9 +5,6 @@ import { SearchIcon, ThemeIcon } from '../components/UI/Icons';
 import { ReactComponent as Logo } from '../img/logo.svg';
 
 const NavbarWrapper = styled.div`
-  position: sticky;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +56,6 @@ const NavbarWrapper = styled.div`
 
   .nav-left nav {
     display: none;
-    transition: 150ms ease;
   }
 
   .nav-left-links {
@@ -68,7 +64,6 @@ const NavbarWrapper = styled.div`
 
   .nav-left-links li a {
     color: ${(props) => props.theme.colors.textPrimary};
-    transition: 250ms;
     margin-right: 1.5em;
   }
 
@@ -203,6 +198,9 @@ const NavbarWrapper = styled.div`
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    position: sticky;
+    top: 0;
+    left: 0;
     .logo {
       width: 100%;
     }
