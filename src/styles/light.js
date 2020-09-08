@@ -29,6 +29,8 @@ export default {
     btnPrimary: '#3a86f9',
     btnSecondary: '#eff5ff',
 
+    checkboxPrimary: '#c0c5c8',
+
     hoverPrimary: '#3a86f9',
     hoverSecondary: '#f6f7f7',
     hoverThird: '#fff',

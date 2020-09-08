@@ -111,6 +111,7 @@ const NavbarWrapper = styled.div`
     color: ${(props) => props.theme.colors.textPrimary};
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 1em;
     position: relative;
   }

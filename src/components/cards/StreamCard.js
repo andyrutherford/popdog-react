@@ -54,7 +54,7 @@ const StreamCardWrapper = styled.div`
     height: 169px;
     background: limegreen;
     border-radius: 10px;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 24px;
     color: #fff;
     background: linear-gradient(
         to bottom,

@@ -19,6 +19,8 @@ const EsportsMatchesWrapper = styled.div`
 
   .header span {
     color: ${(props) => props.theme.colors.textSecondary};
+    display: flex;
+    align-items: center;
   }
 
   .content {
@@ -86,6 +88,71 @@ const EsportsMatchesWrapper = styled.div`
       margin-right: 1rem;
     }
   }
+`;
+
+const ToggleScoresWrapper = styled.label`
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 34px;
+  margin-left: 1em;
+  transform: scale(0.8);
+
+  :hover .slider {
+    background-color: #5b5d5e;
+  }
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ${(props) => props.theme.colors.checkboxPrimary};
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: #29cf4e;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(41px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
   }
 `;
 
@@ -95,12 +162,14 @@ const EsportsMatches = () => {
       <div className='header'>
         <h1>Esports matches</h1>
         <span>
-          <input type='checkbox' id='toggle-scores' name='scores' value='' />
-          <label htmlFor='toggle-scores'>Hide Scores</label>
+          <label>Hide Scores</label>
+          <ToggleScoresWrapper className='switch'>
+            <input type='checkbox' />
+            <span class='slider round'></span>
+          </ToggleScoresWrapper>
         </span>
       </div>
       <div className='content'>
-        <EsportsMatchesCard />
         <EsportsMatchesCard />
         <EsportsMatchesCard />
       </div>

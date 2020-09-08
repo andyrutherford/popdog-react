@@ -290,7 +290,7 @@ const EsportsMatchesCardWrapper = styled.div`
   }
 `;
 
-const EsportsMatchesCard = () => {
+const EsportsMatchesCard = ({ showScore = true }) => {
   return (
     <EsportsMatchesCardWrapper>
       <div className='image'>
@@ -324,9 +324,9 @@ const EsportsMatchesCard = () => {
             <p className='team-name'>FNC</p>
           </div>
           <div className='middle'>
-            <p>1</p>
+            <p>{showScore && '1'}</p>
             <div></div>
-            <p>1</p>
+            <p>{showScore && '1'}</p>
           </div>
           <div className='right'>
             <p className='team-name'>BOOM</p>

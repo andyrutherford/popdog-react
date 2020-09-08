@@ -25,8 +25,8 @@ export const ThemeIcon = () => (
     xmlns='http://www.w3.org/2000/svg'
     x='0px'
     y='0px'
-    width='32px'
-    height='32px'
+    width='16px'
+    height='16px'
     viewBox='0 0 534.18 534.18'
   >
     <g>
