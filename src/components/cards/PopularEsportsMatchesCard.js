@@ -74,10 +74,8 @@ const PopularEsportsMatchesCardWrapper = styled.div`
     border: 1px solid black;
     margin: 0 1em;
     overflow: hidden;
-  }
-
-  .avatar img {
-    width: 100%;
+    background-image: url(${avatar});
+    background-size: 100% 100%;
   }
 
   .overlay-header .description {
@@ -198,9 +196,7 @@ const PopularEsportsMatchesCard = () => {
         </div>
         <div className='overlay'>
           <div className='overlay-header'>
-            <div className='avatar'>
-              <img src={avatar} alt='avatar' />
-            </div>
+            <div className='avatar'></div>
             <div className='description'>
               <p>ESL_DOTA2</p>
               <p>Dota 2</p>

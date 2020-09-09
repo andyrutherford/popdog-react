@@ -5,7 +5,7 @@ import PlayButton from '../UI/PlayButton';
 
 import user from '../../img/user.svg';
 import { ReactComponent as TwitchIcon } from '../../img/twitch-small.svg';
-import streamer1 from '../../img/streamer-1.jpg';
+import streamer from '../../img/streamer-3.jpg';
 
 const StreamCardWrapper = styled.div`
   width: 288px;
@@ -172,7 +172,7 @@ const StreamCardWrapper = styled.div`
     width: 3em;
     border-radius: 50vh;
     background: grey;
-    background-image: url(${streamer1});
+    background-image: url(${streamer});
     background-size: cover;
     border: 1px solid #fff;
   }
@@ -225,10 +225,7 @@ const StreamCard = () => {
       </div>
       <div className='description'>
         <span className='title'>SpyParty</span>
-        <p>
-          @XQC ON TWITTER HEY MAN NICE TITLE BRO! IM OUT OF IDEAS! ARE YOU?
-          YES...
-        </p>
+        <p>AMONG US w/ Toast, Valkyrae, Brooke & more ^-^ - !socials</p>
       </div>
     </StreamCardWrapper>
   );

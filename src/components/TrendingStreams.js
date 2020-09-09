@@ -41,7 +41,6 @@ const TrendingStreams = () => {
           <h1>Trending Streams</h1>
           <span>Find new favorites from these overachievers</span>
         </div>
-        {/* <TrendingStreamsCard /> */}
         <Carousel />
       </Container>
     </TrendingStreamsWrapper>

@@ -3,10 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const Global = createGlobalStyle`
 
 :root {
-
     --br: '0.5em',
-	--mine: 'red';
-    // --transition: 'transform 200ms cubic-bezier(0.2, 1, 0.8, 1)',
   }
 	html, body {
 		box-sizing: border-box;
@@ -19,13 +16,9 @@ const Global = createGlobalStyle`
 	}
 	body {
 		font-family: 'Poppins', sans-serif;
-		
 	}
-	
-
 	h1, h2, h3, h4, h5, h6 {
         font-weight: normal;
-  
 	}
 	a {
 		text-decoration: none;
@@ -46,9 +39,6 @@ const Global = createGlobalStyle`
 	*:focus {
 	  outline: none;
 	}
-	
-
-	
 `;
 
 export default Global;

@@ -1,23 +1,9 @@
 export default {
   colors: {
-    // background: '#e9edf6',
-    // cardBackground: '#fff',
-    // linkColor: '#3b5892',
-    // textColor: '#000',
-    // secondaryTextColor: '#808080',
-    // casesColor: '#3b5892',
-    // deathsColor: '#8b0000',
-    // recoveredColor: '#006400',
-    //   clrdark: 'rgb(13, 17, 19)',
-    //   clrlight: 'rgb(255, 255, 255)',
-    //   clraccent: 'rgb(222, 52, 0)',
-    //   clraccentdark: 'rgb(163, 38, 0)',
-    //   clrsecondary: 'rgb(0, 76, 200)',
-
     clrred: '#EE0000',
-    textPrimary: '#fff', //ok
-    textSecondary: '#919597', //ok
-    textThird: '#fff', //ok
+    textPrimary: '#fff',
+    textSecondary: '#919597',
+    textThird: '#fff',
 
     linkPrimary: '#4e9fff',
 
