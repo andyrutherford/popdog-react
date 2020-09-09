@@ -30,7 +30,6 @@ const PopularWrapper = styled.div`
     border: 1px solid #dfdfdf;
     border-radius: 5px;
     border-color: ${(props) => props.theme.colors.linePrimary};
-    color: ${(props) => props.theme.colors.textPrimary};
   }
 
   a {
@@ -79,7 +78,8 @@ const PopularWrapper = styled.div`
   .card-header {
     display: flex;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
   }
 
   .card-header a {
@@ -101,6 +101,27 @@ const PopularWrapper = styled.div`
   .separator {
     display: flex;
     align-items: center;
+    position: relative;
+    padding-top: 0.625em;
+  }
+
+  .separator span {
+    font-size: 0.75rem;
+    font-weight: 300;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    margin-left: 0.75em;
+    background-color: ${(props) => props.theme.colors.mainBackground};
+    color: ${(props) => props.theme.colors.lineSecondary};
+    padding: 0 0.25em;
+  }
+
+  .separator select {
+    color: ${(props) => props.theme.colors.lineSecondary};
+    font-size: 1rem;
+    padding-left: 0.5em;
+    margin-right: 1em;
   }
 
   .separator div {
@@ -110,7 +131,7 @@ const PopularWrapper = styled.div`
 
   .separator div hr {
     width: 100%;
-    border: 0.5px solid rgb(227, 232, 235);
+    border: 0.5px solid ${(props) => props.theme.colors.linePrimary};
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
@@ -131,7 +152,7 @@ const PopularWrapper = styled.div`
     }
 
     .separator {
-      padding-top: 2em;
+      margin-top: 2em;
     }
   }
 `;
@@ -163,9 +184,15 @@ const Popular = () => {
           </div>
         </div>
         <div className='separator'>
+          <span>Channel language</span>
           <select>
-            <option value='A'>All Languages</option>
-            <option value='B'>English</option>
+            <option value='All languages'>All Languages</option>
+            <option value='English'>English</option>
+            <option value='Spanish'>Spanish</option>
+            <option value='Portuguese'>Portuguese</option>
+            <option value='Russian'>Russian</option>
+            <option value='Japanese'>Japanese</option>
+            <option value='Vietnamese'>Vietnamese</option>
           </select>
           <div>
             <hr />

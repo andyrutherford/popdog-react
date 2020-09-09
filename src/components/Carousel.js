@@ -24,6 +24,10 @@ const CarouselWrapper = styled.div`
     box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 
+  .carousel li .selected {
+    background: transparent;
+  }
+
   .carousel .slide {
     text-align: left;
   }
@@ -121,7 +125,7 @@ const CarouselWrapper = styled.div`
     min-width: 100%;
     margin: 0;
     position: relative;
-    background: #000;
+    background: transparent;
   }
   .carousel .slide img {
     width: 100%;

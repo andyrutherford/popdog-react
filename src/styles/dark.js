@@ -19,6 +19,7 @@ export default {
     textThird: '#fff', //ok
 
     linePrimary: '#5b5d5e',
+    lineSecondary: '#e3e8eb',
 
     mainBackground: '#0d1113',
     cardBackground: '#0d1113',

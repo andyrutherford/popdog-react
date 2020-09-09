@@ -33,6 +33,29 @@ const TopGamesWrapper = styled.div`
   .header {
     margin-bottom: 1.5em;
   }
+
+  .header div {
+    position: relative;
+  }
+
+  .header div span {
+    font-size: 0.75rem;
+    font-weight: 300;
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    margin-left: 0.75em;
+    background-color: ${(props) => props.theme.colors.mainBackground};
+    color: ${(props) => props.theme.colors.lineSecondary};
+    padding: 0 0.25em;
+  }
+
+  .header div select {
+    color: ${(props) => props.theme.colors.lineSecondary};
+    font-size: 1rem;
+    padding-left: 0.5em;
+    margin-right: 1em;
+  }
   .content {
     display: grid;
     grid-template-columns: repeat(auto-fill, 175px);
@@ -158,10 +181,14 @@ const TopGames = () => {
     <TopGamesWrapper>
       <div className='header'>
         <h1>Top games</h1>
-        <select>
-          <option value='A'>Most Viewers</option>
-          <option value='B'>Most Streams</option>
-        </select>
+
+        <div>
+          <span>Channel language</span>
+          <select>
+            <option value='viewers'>Most Viewers</option>
+            <option value='streas'>Most Streams</option>
+          </select>
+        </div>
       </div>
       <div className='content'>
         {games.map((g, idx) => (
