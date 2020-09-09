@@ -101,7 +101,7 @@ const EsportsMatchesCardWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 40%;
-    background: red;
+    background: ${(props) => props.theme.colors.clrred};
     margin: 0.125em;
     padding: 0 0.25em;
     border-radius: 50vh;

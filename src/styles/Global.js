@@ -29,9 +29,10 @@ const Global = createGlobalStyle`
 	}
 	a {
 		text-decoration: none;
+		color: #2062e1;
 	}
 	a:visited {
-		color: #3a86f9;
+		color: #2062e1;
 	}
 	button {
 		cursor: pointer;

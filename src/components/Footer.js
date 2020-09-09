@@ -158,6 +158,7 @@ const Footer = () => {
               href='#!'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='Discord'
             >
               <DiscordIcon width='24px' />
             </a>
@@ -166,6 +167,7 @@ const Footer = () => {
               href='#!'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='Twitter'
             >
               <TwitterIcon width='24px' />
             </a>
@@ -174,6 +176,7 @@ const Footer = () => {
               href='#!'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='Instagram'
             >
               <InstagramIcon width='24px' />
             </a>

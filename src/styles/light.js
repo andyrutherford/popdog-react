@@ -8,15 +8,13 @@ export default {
     // casesColor: '#3b5892',
     // deathsColor: '#8b0000',
     // recoveredColor: '#006400',
-    clrdark: 'rgb(13, 17, 19)',
-    clrlight: 'rgb(255, 255, 255)',
-    clraccent: 'rgb(222, 52, 0)',
-    clraccentdark: 'rgb(163, 38, 0)',
-    clrsecondary: 'rgb(0, 76, 200)',
+    clrred: '#EE0000',
 
     textPrimary: '#0d1113',
-    textSecondary: '#919597',
+    textSecondary: '#5b5d5e',
     textThird: '#494d4f',
+
+    linkPrimary: '#2062e1',
 
     linePrimary: '#c0c5c8',
     lineSecondary: '#464a4c',
@@ -27,12 +25,12 @@ export default {
     footerBackground:
       'linear-gradient(360deg,rgba(235, 241, 245, 0.75) 0%,rgba(235, 241, 245, 0) 100%)',
 
-    btnPrimary: '#3a86f9',
+    btnPrimary: '#2062e1',
     btnSecondary: '#eff5ff',
 
     checkboxPrimary: '#c0c5c8',
 
-    hoverPrimary: '#3a86f9',
+    hoverPrimary: '#2062e1',
     hoverSecondary: '#f6f7f7',
     hoverThird: '#fff',
     socialLinkHover: '#000',

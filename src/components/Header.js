@@ -143,7 +143,6 @@ const Header = () => {
     <HeaderWrapper>
       <div className='header-background'></div>
       <div className='header-content'>
-        {' '}
         <div className='header-left'>
           <h1 className='header-intro'>A new way to find out what's on.</h1>
           <p className='header-description'>

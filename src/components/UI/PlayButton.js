@@ -10,7 +10,7 @@ const PlayButtonWrapper = styled.div`
     .play-btn {
       height: 4em;
       width: 4em;
-      background: red;
+      background: ${(props) => props.theme.colors.clrred};
       border-radius: 50vh;
     }
 
@@ -48,7 +48,7 @@ const PlayButtonWrapper = styled.div`
     }
 
     .play-btn .icon:hover::after {
-      background: red;
+      background: ${(props) => props.theme.colors.clrred};
       z-index: 1;
       animation: pulse 2s infinite;
     }

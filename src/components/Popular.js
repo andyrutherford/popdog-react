@@ -105,7 +105,7 @@ const PopularWrapper = styled.div`
     padding-top: 0.625em;
   }
 
-  .separator span {
+  .separator label {
     font-size: 0.75rem;
     font-weight: 300;
     position: absolute;
@@ -184,8 +184,8 @@ const Popular = () => {
           </div>
         </div>
         <div className='separator'>
-          <span>Channel language</span>
-          <select>
+          <label htmlFor='select-language'>Channel language</label>
+          <select id='select-language'>
             <option value='All languages'>All Languages</option>
             <option value='English'>English</option>
             <option value='Spanish'>Spanish</option>

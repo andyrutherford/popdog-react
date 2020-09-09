@@ -153,7 +153,7 @@ const NavbarWrapper = styled.div`
   }
 
   #login-btn {
-    color: ${(props) => props.theme.colors.btnPrimary};
+    color: ${(props) => props.theme.colors.linkPrimary};
     display: inline-block;
     border-radius: 50vh;
     padding: 11px 8px;
@@ -166,8 +166,7 @@ const NavbarWrapper = styled.div`
   #join-btn {
     display: inline-block;
     line-height: 1rem;
-    background: ${(props) => props.theme.colors.btnPrimary} none repeat scroll
-      0% 0%;
+    background: #2062e1 none repeat scroll 0% 0%;
     color: #fff;
     border-radius: 50vh;
     padding: 11px 8px;
@@ -232,14 +231,18 @@ const Navbar = ({ themeHandler, isDarkMode, sticky }) => {
         </nav>
       </div>
       <div className='nav-right'>
-        <a href='#!'>
+        <a href='#!' aria-label='Search'>
           <div id='search-btn'>
             <SearchIcon size={18} />
           </div>
         </a>
         <div className='divider'></div>
         <div>
-          <button id='theme-btn' onClick={() => themeHandler()}>
+          <button
+            id='theme-btn'
+            aria-label='Change Theme'
+            onClick={() => themeHandler()}
+          >
             <ThemeIcon size={18} backgroundColor='#f6f7f7' />
             <span className='tooltiptext'>
               Enable {isDarkMode ? 'Light' : 'Dark'} Mode
@@ -253,7 +256,7 @@ const Navbar = ({ themeHandler, isDarkMode, sticky }) => {
         </div>
         <div>
           <a id='join-btn' href='#!'>
-            Join Now
+            Join now
           </a>
         </div>
       </div>

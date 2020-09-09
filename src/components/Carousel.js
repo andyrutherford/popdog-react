@@ -283,10 +283,18 @@ const CardCarousel = () => {
             </span>
           </div>
           <div className='nav'>
-            <button className='left' onClick={prevSlide}>
+            <button
+              className='left'
+              aria-label='Previous Stream'
+              onClick={prevSlide}
+            >
               <LeftChevron className='arrow' />
             </button>
-            <button className='right' onClick={nextSlide}>
+            <button
+              className='right'
+              aria-label='Next Stream'
+              onClick={nextSlide}
+            >
               <RightChevron className='arrow' />
             </button>
           </div>

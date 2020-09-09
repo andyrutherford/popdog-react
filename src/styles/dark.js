@@ -14,9 +14,12 @@ export default {
     //   clraccentdark: 'rgb(163, 38, 0)',
     //   clrsecondary: 'rgb(0, 76, 200)',
 
+    clrred: '#EE0000',
     textPrimary: '#fff', //ok
     textSecondary: '#919597', //ok
     textThird: '#fff', //ok
+
+    linkPrimary: '#4e9fff',
 
     linePrimary: '#5b5d5e',
     lineSecondary: '#e3e8eb',

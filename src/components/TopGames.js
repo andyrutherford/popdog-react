@@ -38,7 +38,7 @@ const TopGamesWrapper = styled.div`
     position: relative;
   }
 
-  .header div span {
+  .header div label {
     font-size: 0.75rem;
     font-weight: 300;
     position: absolute;
@@ -183,8 +183,8 @@ const TopGames = () => {
         <h1>Top games</h1>
 
         <div>
-          <span>Channel language</span>
-          <select>
+          <label htmlFor='sort-by'>Sort by</label>
+          <select id='sort-by'>
             <option value='viewers'>Most Viewers</option>
             <option value='streas'>Most Streams</option>
           </select>

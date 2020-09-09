@@ -91,7 +91,7 @@ const TrendingStreamsCardWrapper = styled.div`
 
   .live {
     display: inline-block;
-    background: red;
+    background: ${(props) => props.theme.colors.clrred};
     margin: 0.125em;
     padding: 0 0.5em 0 0.25em;
     border-radius: 50vh;

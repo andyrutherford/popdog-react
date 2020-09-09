@@ -373,7 +373,7 @@ const GameCard = ({ game }) => {
         </div>
         <div className='front'>
           <img className='thumbnail' src={gameCover} alt='' />
-          <h3 className='name'>{game.title}</h3>
+          <h2 className='name'>{game.title}</h2>
           <div className='stats'>
             <p className='viewers'>539.9k</p>
             <div className='streamers'>

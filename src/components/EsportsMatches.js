@@ -179,10 +179,15 @@ const EsportsMatches = () => {
       <div className='header'>
         <h1>Esports matches</h1>
         <span>
-          <label>Hide Scores</label>
+          <label htmlFor='hide-scores'>Hide Scores</label>
           <ToggleScoresWrapper className='switch'>
-            <input type='checkbox' checked={showScores} onChange={onChange} />
-            <span class='slider round'></span>
+            <input
+              type='checkbox'
+              id='hide-scores'
+              checked={showScores}
+              onChange={onChange}
+            />
+            <span className='slider round'></span>
           </ToggleScoresWrapper>
         </span>
       </div>
