@@ -4,6 +4,12 @@ import styled from 'styled-components';
 import GameCard from './cards/GameCard';
 import SeeMoreButton from './UI/SeeMoreButton';
 
+import game1 from '../img/games/game1.jpg';
+import game2 from '../img/games/game2.jpg';
+import game3 from '../img/games/game3.jpg';
+import game4 from '../img/games/game4.jpg';
+import game5 from '../img/games/game5.jpg';
+import game6 from '../img/games/game6.jpg';
 import controller from '../img/game-controller.svg';
 
 const TopGamesWrapper = styled.div`
@@ -143,36 +149,42 @@ const games = [
     title: 'Just Chatting',
     watching: 15,
     streams: 76,
+    img: game1,
   },
   {
     rank: 2,
     title: 'Fall Guys',
     watching: 276,
     streams: 587,
+    img: game2,
   },
   {
     rank: 3,
     title: 'League of Legends',
     watching: 152,
     streams: 99,
+    img: game3,
   },
   {
     rank: 4,
     title: 'Fortnite',
     watching: 141,
     streams: 155,
+    img: game4,
   },
   {
     rank: 5,
     title: 'Grand Theft Auto 5',
     watching: 1431,
     streams: 6502,
+    img: game5,
   },
   {
     rank: 6,
     title: 'VALORANT',
     watching: 265,
     streams: 285,
+    img: game6,
   },
 ];
 

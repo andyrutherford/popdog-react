@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import gameCover from '../../img/game-cover.jpg';
 import streamer1 from '../../img/streamer-1.jpg';
 import streamer2 from '../../img/streamer-2.jpg';
 import streamer3 from '../../img/streamer-3.jpg';
@@ -256,14 +255,24 @@ const GameCardWrapper = styled.div`
     -webkit-transform: scale(0.2, 0.9);
     transform: scale(0.2, 0.9);
     border-radius: 0.5em;
+    overflow: hidden;
     -webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
     box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
 
+  .card-background img {
+    opacity: 0.3;
+    height: 21%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    clip-path: url(#wave);
+  }
+
   .game:hover .rank {
-    -webkit-transform: translate(135%, -51%);
-    transform: translate(135%, -51%);
+    -webkit-transform: translate(135%, -52%);
+    transform: translate(135%, -52%);
   }
 
   .game:hover .front {
@@ -366,13 +375,12 @@ const GameCardWrapper = styled.div`
 const GameCard = ({ game }) => {
   return (
     <GameCardWrapper>
-      {' '}
       <div className='game'>
         <div className='rank' style={{ width: '29px', textAlign: 'center' }}>
           {game.rank}
         </div>
         <div className='front'>
-          <img className='thumbnail' src={gameCover} alt='' />
+          <img className='thumbnail' src={game.img} alt='' />
           <h2 className='name'>{game.title}</h2>
           <div className='stats'>
             <p className='viewers'>539.9k</p>
@@ -419,9 +427,31 @@ const GameCard = ({ game }) => {
             </div>
           </div>
         </div>
-
-        <div className='card-background'></div>
+        <div className='card-background'>
+          <img src={game.img} alt='' />
+        </div>
       </div>
+
+      <svg width='0' height='0' x='0px' y='0px'>
+        <defs>
+          <clipPath id='wave' clipPathUnits='objectBoundingBox'>
+            <path
+              d='M1.5,0H1H0.5H0v0.8C0.3,0.8,0.3,1,0.5,1c0,0,0,0,0,0C0.8,1,0.8,0.8,1,0.8c0,0,0,0,0,0C1.3,0.8,1.3,1,1.5,1
+    C1.8,1,1.8,0.8,2,0.8V0H1.5z'
+            />
+            <animateTransform
+              attributeType='XML'
+              attributeName='transform'
+              type='translate'
+              from='0 0'
+              to='-185 0'
+              begin='0s'
+              dur='10s'
+              repeatCount='indefinite'
+            />
+          </clipPath>
+        </defs>
+      </svg>
     </GameCardWrapper>
   );
 };
