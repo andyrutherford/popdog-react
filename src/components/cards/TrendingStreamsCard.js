@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import random from '../../utils/random';
+
 import PlayButton from '../UI/PlayButton';
 
+import game from '../../img/cards/headercard1.jpg';
 import { ReactComponent as MicIcon } from '../../img/mic.svg';
 import { ReactComponent as FlameIcon } from '../../img/flame.svg';
 import user from '../../img/user.svg';
@@ -34,7 +37,7 @@ const TrendingStreamsCardWrapper = styled.div`
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(https://source.unsplash.com/random/762x406/?videogame);
+    background-image: url(${game});
   }
 
   .main-card:hover .center {
@@ -121,7 +124,6 @@ const TrendingStreamsCardWrapper = styled.div`
     -webkit-mask-size: cover;
     mask-size: cover;
     background: #fff;
-    vertical-align: text-top;
     margin-right: 0.25em;
   }
 
@@ -275,7 +277,7 @@ const TrendingStreamsCard = () => {
                   <div></div>
                   <span>LIVE</span>
                 </div>
-                <div className='viewers'>2,471</div>
+                <div className='viewers'>{random()}</div>
               </div>
               <div>
                 <div className='language'>

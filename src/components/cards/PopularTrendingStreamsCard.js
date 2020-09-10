@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import random from '../../utils/random';
+
 import PlayButton from '../UI/PlayButton';
 
+import game from '../../img/cards/headercard3.jpg';
 import trending from '../../img/trending.svg';
-import avatar from '../../img/avatar.png';
+import avatar from '../../img/avatar-4.png';
 
 const PopularTrendingStreamsCardWrapper = styled.div`
   cursor: pointer;
@@ -28,8 +31,9 @@ const PopularTrendingStreamsCardWrapper = styled.div`
         rgba(255, 255, 255, 0) 20%,
         rgba(0, 0, 0, 0.9)
       ),
-      url(https://source.unsplash.com/random/400x300/?videogame);
-    background-size: 100% 100%;
+      url(${game});
+    background-size: cover;
+    background-position: center;
     color: #fff;
     height: 206px;
     width: 283px;
@@ -141,14 +145,14 @@ const PopularTrendingStreamsCard = () => {
           <div className='overlay-header'>
             <div className='avatar'></div>
             <div className='description'>
-              <p>WePlayEsport_EN</p>
+              <p>Pogba</p>
               <p>Dota 2</p>
             </div>
           </div>
           <div className='overlay-footer'>
             <div className='icon'></div>
             <p>
-              — Overachieving <span>881 viewers</span>
+              — Overachieving <span>{random()} viewers</span>
             </p>
           </div>
         </div>

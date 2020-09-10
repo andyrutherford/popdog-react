@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import random from '../../utils/random';
+
 import PlayButton from '../UI/PlayButton';
 
+import game from '../../img/cards/headercard2.jpg';
 import trophy from '../../img/trophy.svg';
 import avatar from '../../img/avatar.png';
 
@@ -28,8 +31,9 @@ const PopularStreamsCardWrapper = styled.div`
         rgba(255, 255, 255, 0) 20%,
         rgba(0, 0, 0, 0.9)
       ),
-      url(https://source.unsplash.com/random/400x300/?videogame);
-    background-size: 100% 100%;
+      url(${game});
+    background-size: cover;
+    background-position: center;
     color: #fff;
     height: 206px;
     width: 283px;
@@ -158,7 +162,7 @@ const PopularStreamsCard = () => {
             </div>
             &nbsp;
             <p>
-              — Most viewers now: <span>63.2k viewers</span>
+              — Most viewers now: <span>{random()} viewers</span>
             </p>
           </div>
         </div>

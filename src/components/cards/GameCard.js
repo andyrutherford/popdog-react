@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import random from '../../utils/random';
+
 import streamer1 from '../../img/streamer-1.jpg';
 import streamer2 from '../../img/streamer-2.jpg';
 import streamer3 from '../../img/streamer-3.jpg';
@@ -271,8 +273,8 @@ const GameCardWrapper = styled.div`
   }
 
   .game:hover .rank {
-    -webkit-transform: translate(135%, -52%);
-    transform: translate(135%, -52%);
+    -webkit-transform: translate(135%, -56%);
+    transform: translate(135%, -56%);
   }
 
   .game:hover .front {
@@ -383,7 +385,7 @@ const GameCard = ({ game }) => {
           <img className='thumbnail' src={game.img} alt='' />
           <h2 className='name'>{game.title}</h2>
           <div className='stats'>
-            <p className='viewers'>539.9k</p>
+            <p className='viewers'>{random()}</p>
             <div className='streamers'>
               <img src={streamer1} alt='' />
               <img src={streamer2} alt='' />
@@ -394,11 +396,11 @@ const GameCard = ({ game }) => {
         <div className='back'>
           <div className='streaming-info'>
             <p className='game-stat'>
-              {game.watching}
+              {random()}
               <span>Watching</span>
             </p>
             <p className='game-stat'>
-              {game.streams}
+              {random()}
               <span>Streams</span>
             </p>
           </div>
@@ -408,22 +410,22 @@ const GameCard = ({ game }) => {
               <div className='icon'>
                 <img src={streamer1} alt='' />
               </div>
-              <p className='name'>Gamer</p>
-              <p className='number'>36.1k</p>
+              <p className='name'>xQcOW</p>
+              <p className='number'>{random()}</p>
             </div>
             <div className='streamer'>
               <div className='icon'>
                 <img src={streamer2} alt='' />
               </div>
-              <p className='name'>Gamer</p>
-              <p className='number'>32.2k</p>
+              <p className='name'>Mizkif</p>
+              <p className='number'>{random()}</p>
             </div>
             <div className='streamer'>
               <div className='icon'>
                 <img src={streamer3} alt='' />
               </div>
-              <p className='name'>Gamer</p>
-              <p className='number'>17.3k</p>
+              <p className='name'>scoped</p>
+              <p className='number'>{random()}</p>
             </div>
           </div>
         </div>

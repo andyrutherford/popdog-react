@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import random from '../../utils/random';
+
 import PlayButton from '../UI/PlayButton';
 
 import user from '../../img/user.svg';
@@ -205,7 +207,7 @@ const StreamCard = () => {
             <div></div>
             <span>LIVE</span>
           </div>
-          <div className='viewers'>34.4k</div>
+          <div className='viewers'>{random()}</div>
         </div>
         <div className='top-right'>
           <div>

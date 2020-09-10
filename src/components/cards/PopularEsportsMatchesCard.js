@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import PlayButton from '../UI/PlayButton';
 
+import game from '../../img/cards/headercard1.jpg';
 import streamer1 from '../../img/streamer-1.jpg';
 import streamer2 from '../../img/streamer-2.jpg';
 import swords from '../../img/swords.svg';
@@ -30,8 +31,9 @@ const PopularEsportsMatchesCardWrapper = styled.div`
         rgba(255, 255, 255, 0) 20%,
         rgba(0, 0, 0, 1)
       ),
-      url(https://source.unsplash.com/random/400x300/?videogame);
-    background-size: 100% 100%;
+      url(${game});
+    background-size: cover;
+    background-position: center;
     color: #fff;
     height: 206px;
     width: 283px;
