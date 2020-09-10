@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import random from '../utils/random';
 import EsportsMatchesCard from './cards/EsportsMatchesCard';
 import SeeMoreButton from './UI/SeeMoreButton';
 import rightarrow from '../img/right-arrow.svg';
@@ -173,6 +174,7 @@ const EsportsMatches = () => {
   const [showScores, setShowScores] = useState(false);
 
   const onChange = () => setShowScores(!showScores);
+  const [randomNum] = useState([random(), random()]);
 
   return (
     <EsportsMatchesWrapper>
@@ -192,8 +194,8 @@ const EsportsMatches = () => {
         </span>
       </div>
       <div className='content'>
-        <EsportsMatchesCard showScores={!showScores} />
-        <EsportsMatchesCard showScores={!showScores} />
+        <EsportsMatchesCard viewers={randomNum[0]} showScores={!showScores} />
+        <EsportsMatchesCard viewers={randomNum[1]} showScores={!showScores} />
       </div>
       <div className='separator'>
         <div className='separator-line'>
